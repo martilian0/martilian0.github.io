@@ -3,7 +3,7 @@
 icon: fa-solid fa-brush
 order: 4
 title: Portfolio
-permalink: /portfolio/
+permalink: /portfolio2/
 lang: es
 ---
 <!-- Nivea Closeup Shot -->

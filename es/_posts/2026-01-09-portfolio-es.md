@@ -2,9 +2,9 @@
 layout: page
 title: PORTFOLIO
 date: 2026-01-09 16:59 -0300
-redirect_to: /portfolio/
+redirect_to: /portfolio2/
 lang: es
-permalink: /portfolio/
+permalink: /portfolio2/
 
 pin: true
 image:
