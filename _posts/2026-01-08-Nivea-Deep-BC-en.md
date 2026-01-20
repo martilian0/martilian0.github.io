@@ -6,7 +6,7 @@ pin: false
 categories: [PORTFOLIO, ADVERTISING]
 date: 2026-01-08 11:55 -0300
 lang: en
-permalink: _nivea
+permalink: /nivea/
 image:
   path: /assets/niveadeep/niveashot.jpg
   alt: Nivea DEEP Black Carbon

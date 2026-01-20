@@ -6,7 +6,7 @@ pin: false
 categories: [PORTFOLIO, ADVERTISING]
 date: 2026-01-08 11:54 -0300
 lang: br
-permalink: _nso-mania
+permalink: /nso-mania/
 image:
   path: /assets/nsomania/cover.jpg
   alt: Transição NSO Mania

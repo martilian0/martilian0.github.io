@@ -3,7 +3,7 @@
 icon: fa-regular fa-headphones
 order: 7
 title: Audios
-permalink: _audios
+permalink: /audios/
 lang: fr
 
 ---

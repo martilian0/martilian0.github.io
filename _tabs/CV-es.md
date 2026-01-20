@@ -4,7 +4,7 @@ layout: page
 icon: fa-regular fa-file
 order: 7
 title: CV
-permalink: _CV
+permalink: /CV/
 lang: es
 
 

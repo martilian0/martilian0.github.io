@@ -4,5 +4,5 @@ icon: fas fa-archive
 order: 6
 title: Archives
 lang: en
-permalink: _archives
+permalink: /archives/
 ---

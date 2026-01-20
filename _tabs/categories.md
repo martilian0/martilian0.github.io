@@ -4,5 +4,5 @@ icon: fas fa-stream
 order: 2
 title: categories
 lang: en
-permalink: _categories
+permalink: /categories/
 ---

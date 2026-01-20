@@ -3,7 +3,7 @@
 icon: fas fa-info-circle
 order: 5
 title: About
-permalink: _about
+permalink: /about/
 lang: en
 ---
 ![Desktop View](https://f4.bcbits.com/img/0031884415_20.jpg){: .right }{: .shadow }{: w="320" }Hi! I'm Martín. I'm a 3D artist living in Chile. I graduated as a Digital Animator, but my main focus has been hard surface 3D modeling for real-time rendering engines.

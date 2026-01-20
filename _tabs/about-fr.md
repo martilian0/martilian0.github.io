@@ -4,7 +4,7 @@ icon: fas fa-info-circle
 order: 3
 title: Á propos
 lang: fr
-permalink: _about
+permalink: /about/
 ---
 ![Desktop View](https://f4.bcbits.com/img/0031884415_20.jpg){: .right }{: .shadow }{: w="320" }Salut ! Je m'appelle Martin. Je suis artiste 3D et je vis au Chili. Diplômé en animation numérique, je me suis principalement spécialisé dans la modélisation 3D de surfaces dures pour les moteurs de rendu en temps réel.
 
