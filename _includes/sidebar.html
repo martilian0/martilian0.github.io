@@ -58,27 +58,26 @@
   <div class="d-flex flex-wrap gap-2">
     {% for tongue in site.languages %}
 
-      {% comment %} 1. Limpiamos la URL actual de cualquier prefijo de idioma {% endcomment %}
-      {% assign clean_url = page.url %}
+      {% comment %} 1. Calculamos la URL limpia (sin prefijos de idioma) {% endcomment %}
+      {% assign clean_path = page.url %}
       {% for lang in site.languages %}
         {% if lang != "en" %}
-          {% capture lang_prefix %}/{{ lang }}/{% endcapture %}
-          {% assign clean_url = clean_url | replace: lang_prefix, "/" %}
+          {% capture prefix %}/{{ lang }}/{% endcapture %}
+          {% assign clean_path = clean_path | replace: prefix, "/" %}
         {% endif %}
       {% endfor %}
 
-      {% comment %} 2. Construimos la URL de destino usando la URL absoluta del sitio {% endcomment %}
+      {% comment %} 2. FORZADO: Si es EN, construimos una URL que el navegador entienda como externa/absoluta {% endcomment %}
       {% if tongue == "en" %}
-        {% comment %} Para EN, usamos la raíz pura del sitio {% endcomment %}
-        {% assign target_href = site.url | append: site.baseurl | append: clean_url | replace: '//', '/' %}
+        {% capture target_href %}https://martilian0.github.io{{ clean_path | replace: '//', '/' }}{% endcapture %}
       {% else %}
-        {% comment %} Para otros, insertamos el código de idioma {% endcomment %}
-        {% assign target_href = site.url | append: site.baseurl | append: '/' | append: tongue | append: clean_url | replace: '//', '/' %}
+        {% capture target_href %}{{ site.baseurl }}/{{ tongue }}{{ clean_path | replace: '//', '/' }}{% endcapture %}
       {% endif %}
 
+      {% comment %} 3. IMPORTANTE: Eliminamos {% static_href %} para que el tema no toque el link {% endcomment %}
       <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
          style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
-         href="{{ target_href }}">
+         href="{{ target_href | replace: '//', '/' }}">
 
         <span class="lang-flag">
           {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
