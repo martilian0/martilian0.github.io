@@ -57,35 +57,42 @@
   <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
   <div class="d-flex flex-wrap gap-2">
     {% for tongue in site.languages %}
+  {% comment %}
+    PASO 1: Determinar la ruta base (limpia) de la página actual.
+    Polyglot maneja las rutas de forma que 'page.url' siempre es la ruta relativa.
+  {% endcomment %}
 
-      {% comment %} 1. Limpiamos la URL actual de cualquier prefijo de idioma {% endcomment %}
-      {% assign clean_url = page.url %}
-      {% for lang in site.languages %}
-        {% if lang != "en" %}
-          {% capture lang_prefix %}/{{ lang }}/{% endcapture %}
-          {% assign clean_url = clean_url | replace: lang_prefix, "/" %}
-        {% endif %}
-      {% endfor %}
+  {% assign current_path = page.url %}
 
-      {% comment %} 2. Construimos la URL de destino usando la URL absoluta del sitio {% endcomment %}
-      {% if tongue == "en" %}
-        {% comment %} Para EN, usamos la raíz pura del sitio {% endcomment %}
-        {% assign target_href = site.url | append: site.baseurl | append: clean_url | replace: '//', '/' %}
-      {% else %}
-        {% comment %} Para otros, insertamos el código de idioma {% endcomment %}
-        {% assign target_href = site.url | append: site.baseurl | append: '/' | append: tongue | append: clean_url | replace: '//', '/' %}
-      {% endif %}
+  {% comment %}
+    PASO 2: Si el idioma que estamos iterando es el por defecto (en),
+    la URL debe ser la ruta original sin prefijos.
+  {% endcomment %}
+  {% if tongue == site.default_lang %}
+    {% assign target_href = current_path | prepend: site.baseurl %}
+  {% else %}
+    {% comment %}
+      Para los demás idiomas (es, fr, br), prependemos el código del idioma.
+      Polyglot se encarga de que esto no se duplique si se hace correctamente.
+    {% endcomment %}
+    {% assign target_href = current_path | prepend: tongue | prepend: '/' | prepend: site.baseurl %}
+  {% endif %}
 
-      <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
-         style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
-         href="{{ target_href }}">
+  {% comment %}
+    PASO 3: EL TRUCO FINAL.
+    Polyglot necesita que los enlaces de cambio de idioma NO sean alterados por su motor interno.
+    Para eso usamos el tag {% static_href %}.
+  {% endcomment %}
+  <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
+     style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
+     {% static_href %}href="{{ target_href | replace: '//', '/' }}"{% endstatic_href %}>
 
-        <span class="lang-flag">
-          {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
-        </span>
-        {{ tongue | upcase }}
-      </a>
-    {% endfor %}
+    <span class="lang-flag">
+      {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
+    </span>
+    {{ tongue | upcase }}
+  </a>
+{% endfor %}
   </div>
 </div>
 
