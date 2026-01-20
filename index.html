@@ -1,0 +1,28 @@
+---
+layout: home
+# Index page
+---
+
+
+{% for lang in site.languages %}
+{{ lang }}
+{% endfor %}
+
+{% if site.polyglot %}
+  <ul class="language-switcher">
+    {% for lang in site.polyglot.languages %}
+      {% if lang != site.active_lang %}
+        {% assign switch_lang_url = site.baseurl | append: "/" | append: lang | append: page.url %}
+        <li>
+          <a href="{{ switch_lang_url | relative_url }}">
+            {{ lang | upcase }}
+          </a>
+        </li>
+      {% else %}
+        <li class="active">
+          {{ lang | upcase }}
+        </li>
+      {% endif %}
+    {% endfor %}
+  </ul>
+{% endif %}

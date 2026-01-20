@@ -1,0 +1,15 @@
+tagline: "
+Bienvenue sur mon site, vous y trouverez des informations relatives à mon portfolio et aux différents projets sur lesquels je travaille ❤️."
+tabs:
+  home: "Accueil"
+  categories: "Catégories"
+  tags: "Balises"
+  archives: "Archives"
+  about: "À propos"
+
+layout:
+  categories:
+    category: "catégorie"
+    categories: "catégories"
+    post: "article"
+    posts: "articles"

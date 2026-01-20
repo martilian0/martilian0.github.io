@@ -1,0 +1,14 @@
+tagline: "Welcome to my site, here you will find information related to my portfolio and various projects I am working on ❤️."
+tabs:
+  home: "Home"
+  categories: "Categories"
+  tags: "Tags"
+  archives: "Archives"
+  about: "About"
+
+layout:
+  categories:
+    category: "category"
+    categories: "categories"
+    post: "post"
+    posts: "posts"

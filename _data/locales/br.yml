@@ -1,0 +1,14 @@
+tagline: "Bem-vindo(a) ao meu site! Aqui você encontrará informações sobre meu portfólio e os diversos projetos em que estou trabalhando ❤️."
+tabs:
+  home: "INÍCIO"
+  categories: "CATEGORIAS"
+  tags: "TAGS"
+  archives: "ARQUIVOS"
+  about: "SOBRE"
+
+layout:
+  categories:
+    category: "categoria"
+    categories: "categorias"
+    post: "postagem"
+    posts: "postagens"

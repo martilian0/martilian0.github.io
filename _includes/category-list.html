@@ -1,0 +1,33 @@
+{% comment %}
+  Simplified Chirpy category list for Polyglot users.
+  This looks for translations in _data/locales/[lang].yml
+{% endcomment %}
+
+{% assign lang = site.active_lang %}
+{% assign locale = site.data.locales[lang].layout.categories %}
+
+<ul class="list-group list-group-flush shadow-sm rounded-3">
+  {% for category in site.categories %}
+    {% assign category_name = category | first %}
+    {% assign posts = category | last %}
+    {% assign posts_size = posts | size %}
+
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <div class="d-flex align-items-center">
+        <i class="far fa-folder-open fa-fw text-muted me-2"></i>
+        <a href="{{ site.baseurl }}/categories/{{ category_name | slugify | url_encode }}/" class="mx-2">
+          {{ category_name }}
+        </a>
+
+        <span class="text-muted small">
+          {{ posts_size }}
+          {% if posts_size > 1 %}
+            {{ locale.posts | default: 'posts' }}
+          {% else %}
+            {{ locale.post | default: 'post' }}
+          {% endif %}
+        </span>
+      </div>
+    </li>
+  {% endfor %}
+</ul>

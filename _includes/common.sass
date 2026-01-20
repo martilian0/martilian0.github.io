@@ -1,0 +1,42 @@
+.lang-name-box {
+      font-family: 'NotoColorEmojiLimited', -apple-system, BlinkMacSystemFont,
+        'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji',
+        'Segoe UI Emoji', 'Segoe UI Symbol';
+      margin: 0.1rem;
+      margin-bottom: 0.15rem;
+
+      .lang-name {
+        padding: 0.8rem;
+        border: 1px solid transparent;
+        border-radius: 25%/75%;
+        width: 100%;
+        text-align: left;
+        font-size: 0.9rem;
+        margin-bottom: 0.1rem;
+        justify-content: left;
+        color: var(--sidebar-active-color);
+        // background-color: var(--sidebar-bg);
+      }
+
+      .disabled-lang {
+        background-color: var(--sidebar-disabled-color);
+        color: #ff0000;
+        &:hover {
+          background-color: #ffe3e5;
+        }
+      }
+
+      #current-lang {
+        background-color: var(--sidebar-hover-bg);
+      }
+    }
+
+    .lang-div {
+      margin-bottom: 0.2rem;
+      padding: 0;
+    }
+
+    #language {
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+    }

@@ -1,0 +1,8 @@
+---
+layout: categories
+icon: fas fa-stream
+order: 1
+title: Catégories
+lang: fr
+permalink: _categories
+---

@@ -1,0 +1,15 @@
+tagline: "Bienvenido a mi sitio, acá encontraras información relacionada a mi portafolio y diversos proyectos en los que estoy trabajando ❤️."
+tabs:
+  home: "Inicio"
+  categories: "Categorías"
+  tags: "Etiquetas"
+  archives: "ARCHIVOS"
+  about: "Acerca de"
+
+# Add this 'layout' wrapper!
+layout:
+  categories:
+    category: "categoría"
+    categories: "categorías"
+    post: "entrada"
+    posts: "entradas"
