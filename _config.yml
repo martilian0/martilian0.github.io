@@ -22,6 +22,7 @@ languages: ["en", "es", "fr", "br"]
 default_lang: "en"
 exclude_from_localization: ["javascript", "images", "assets", "sitemap", "public"]
 parallel_localization: false
+relativize_urls: false  
 url: "https://martilian0.github.io"
 
 # Polyglot Languages setup
