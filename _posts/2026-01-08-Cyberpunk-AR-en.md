@@ -7,7 +7,7 @@ categories: [PORTFOLIO, GAME ART]
 tags: [3D Art, Game Art, Weapons]
 date: 2026-01-08 11:56 -0300
 lang: en
-permalink: _Cyberpunk-AR
+permalink: /posts/cyberpunk-ar/
 image:
   path: /assets/cyberpunkar/cyberpunkrifle.jpg
   alt: Side view of Cyberpunk AR

@@ -1,48 +1,48 @@
 ---
 layout: post
-title: Rifle de Assalto CYBERPUNK
-description: Modelagem de Rifle de Assalto Cyberpunk
+title: Fusil d'Assaut CYBERPUNK
+description: Modélisation d'un Fusil d'Assaut Cyberpunk
 pin: true
 categories: [PORTFOLIO, GAME ART]
 tags: [3D Art, Game Art, Weapons]
 date: 2026-01-08 11:56 -0300
-lang: br
-permalink: _Cyberpunk-AR
+lang: fr
+permalink: /posts/cyberpunk-ar/
 image:
   path: /assets/cyberpunkar/cyberpunkrifle.jpg
-  alt: Vista lateral do AR Cyberpunk
+  alt: Vue latérale de l'AR Cyberpunk
 ---
 
-Este foi um projeto de modelagem 3D inspirado em um conceito de vista lateral feito por **[Dipo Muh](https://www.artstation.com/nomansnodead)**.
-Sempre fui inspirado por mundos de ficção científica e decidi que tentaria recriar um dos muitos conceitos incríveis feitos pelo Dipo. Então, escolhi o segundo dos três exibidos no conceito.
+Ceci était un projet de modélisation 3D inspiré d'un concept en vue latérale réalisé par **[Dipo Muh](https://www.artstation.com/nomansnodead)**.
+J'ai toujours été inspiré par les mondes de science-fiction et j'ai décidé d'essayer de recréer l'un des nombreux concepts géniaux réalisés par Dipo. J'ai donc choisi le deuxième des trois présentés dans le concept.
 
 ![img-description](https://cdna.artstation.com/p/assets/images/images/031/861/748/large/dipo-muh-guns-36-work.jpg?1604823616){: .left }{: .shadow }{: width="300" height="400" }
 
-Mas eu também sabia que queria ir muito além da ideia de apenas fazer um modelo; eu queria fazer um [Viewmodel](https://developer.valvesoftware.com/wiki/Viewmodel) da arma (basicamente uma visão em primeira pessoa) e adicionar algumas animações para ver como ficaria dentro de um motor de jogo... só por diversão 😂.
+Mais je savais aussi que je voulais aller bien au-delà de l'idée de simplement en faire un modèle ; je voulais créer un [Viewmodel](https://developer.valvesoftware.com/wiki/Viewmodel) de l'arme (essentiellement une vue à la première personne) et ajouter quelques animations pour voir à quoi cela ressemblerait dans un moteur de jeu... juste pour le plaisir 😂.
 
-Levei um pouco mais de tempo do que o esperado porque fui aprendendo alguns aspectos técnicos do projeto conforme avançava.
-Descobri que props de "hard surface" poderiam pular as regras de modelagem por subdivisão, desde que mantivessem um bom sombreamento (shading) em superfícies planas. Além disso, tive que reimaginar os outros lados da arma, já que havia apenas uma imagem como referência, e não era baseada em uma arma da vida real. Levei um tempo para descobrir como resolver isso, mas no fim, para o propósito do projeto, acho que o resultado ficou ok.
+Cela m'a pris un peu plus de temps que prévu car j'apprenais certains aspects techniques du projet au fur et à mesure de ma progression.
+J'ai découvert que les accessoires en "hard surface" pouvaient ignorer les règles de modélisation par subdivision tant qu'ils conservaient un bon ombrage (shading) sur les surfaces planes. J'ai également dû réimaginer les autres côtés de l'arme, puisqu'il n'y avait qu'une seule image de référence et qu'elle ne provenait pas d'une arme réelle. Il m'a fallu un peu de temps pour comprendre comment résoudre cela, mais au final, pour l'objectif du projet, je pense que le résultat est satisfaisant.
 
 ![Desktop View](/assets/cyberpunkar/cyberpunk-ar-anim.gif){: .right }{: .shadow }{: w="300" }
 
-Outro aspecto do projeto foi como eu iria "rigar" o modelo para as partes móveis da arma, mas como eram partes mecânicas, os movimentos não eram tão complicados e apenas se moviam em seus eixos correspondentes. A única exceção neste caso foi o cabo enrolado, que recebeu uma junta dinâmica dedicada calculada após a finalização da animação base.
+Un autre aspect du projet concernait le "rigging" du modèle pour les parties mobiles de l'arme, mais comme il s'agissait de pièces mécaniques, les mouvements n'étaient pas si compliqués et se déplaçaient simplement selon leurs axes correspondants. La seule exception dans ce cas était le câble en spirale, qui a bénéficié d'une articulation dynamique dédiée calculée après la réalisation de l'animation de base.
 
-Durante a realização deste projeto, fiquei fora de casa por algum tempo, mas felizmente meu irmão tinha um computador disponível onde eu podia trabalhar, então consegui progredir na animação por lá (:
+Pendant la réalisation de ce projet, j'ai été absent de chez moi pendant un certain temps, mais heureusement mon frère avait un ordinateur disponible sur lequel je pouvais travailler, ce qui m'a permis de progresser sur l'animation là-bas (:
 
-Quando estava chegando perto das fases finais do processo, decidi mergulhar no design de áudio e outros elementos, como adicionar um elemento emissivo na textura para sinalizar ao jogador que a munição estava acabando, mudando a cor do visor para vermelho.
+Alors que je me rapprochais des étapes finales du processus, j'ai décidé de me lancer dans le design sonore et d'autres éléments, comme l'ajout d'un élément émissif dans la texture pour signaler au joueur qu'il n'avait plus de munitions en changeant la couleur de l'écran en rouge.
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate iaculis magna, ut cursus orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam pretium sodales enim a laoreet. Suspendisse fermentum finibus orci, feugiat vestibulum elit porttitor eget. Aenean ultricies mauris eu nisl tempor, et consectetur eros pretium. Cras vel scelerisque lacus. In at nisi non felis dapibus porta. Vestibulum arcu mi, venenatis non quam ac, accumsan mollis lorem.
 
 <video autoplay="" class="vjs-tech" controlslist="nodownload" id="video_html5_api" width="765" loop="" muted="muted" playsinline="playsinline" poster="https://cdn.artstation.com/p/thumbnails/001/168/392/thumb.jpg" tabindex="-1" preload="auto"><source media="(min-width: 0px)" src="https://cdn.artstation.com/p/video_sources/001/197/226/martin-abarca-dipogun-vid00.mp4" type="video/mp4"></video>
 
-## Titulardo
+## Titre
 
-Este projeto me ajudou a descobrir a importância de prestar atenção em como seus mapas de roughness e metallic se comportam com a luz refletindo na superfície. Às vezes, uma boa pintura pode mascarar o modelo e fazê-lo parecer bom, mas ter aspectos molhados ou brilhantes que não reagem de fato à luz faz com que a ilusão caia muito rápido.
+Ce projet m'a aidé à découvrir l'importance de prêter attention à la façon dont vos cartes de roughness et de metallic se comportent avec la lumière se reflétant sur la surface. Parfois, un bon travail de peinture peut masquer les défauts et rendre le modèle attrayant, mais le fait d'avoir des aspects humides ou brillants sur le modèle qui ne réagissent pas réellement à la lumière brise très vite l'illusion.
 
 {%
   include embed/video.html
   src='https://video.gumlet.io/696069beac93fe085655e2c9/696e9c5a6f4a3a8ce103d397/main.mp4'
-  title='Processo de texturização do mapa de Roughness'
+  title='Processus de texturation de la carte de Roughness'
   autoplay=true
   loop=true
   muted=true
@@ -51,11 +51,11 @@ Este projeto me ajudou a descobrir a importância de prestar atenção em como s
 Maecenas et tortor consectetur, malesuada leo sed, placerat diam. Integer pellentesque tortor et tellus interdum, ut blandit metus sodales. Aenean dolor est, blandit et facilisis et, viverra in ipsum. Sed bibendum auctor dolor, vitae efficitur sem laoreet eget. Duis nec congue turpis, vel aliquet sapien. Donec eget venenatis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sodales ipsum nec dolor scelerisque tincidunt.
 ![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }
 
-Ao reunir material de referência e tentar entender em qual arma da vida real este conceito foi baseado, descobri que o Lee Enfield No.4 era o design mais próximo.
+En rassemblant du matériel de référence et en essayant de comprendre sur quelle arme réelle ce concept était basé, j'ai trouvé que le Lee Enfield No.4 était le design le plus proche.
 Aliquam tincidunt dapibus velit, in consectetur ipsum facilisis in. Maecenas interdum odio arcu, quis eleifend ante tincidunt nec. Fusce non tristique orci. Vivamus hendrerit viverra risus et porttitor. Nam vel dolor vestibulum libero tincidunt scelerisque id non mi. In rhoncus vitae mi non porta. Cras viverra tellus ut mollis lacinia. Donec imperdiet lacinia blandit.
 
 ![img-description](https://cdnb.artstation.com/p/assets/images/images/059/692/109/large/martin-abarca-martin-abarca-dipogun-00.jpg?1676946580)
-_Render no Marmoset Toolbag 5_
+_Rendu Marmoset Toolbag 5_
 
 <video autoplay="" class="vjs-tech" controlslist="nodownload" id="video_html5_api" width="765" loop="" muted="muted" playsinline="playsinline" poster="https://cdn.artstation.com/p/thumbnails/001/168/394/thumb.jpg" tabindex="-1" preload="auto"><source media="(min-width: 0px)" src="https://cdn.artstation.com/p/video_sources/001/197/228/martin-abarca-dipogun-vid01.mp4" type="video/mp4"></video>
 
@@ -65,5 +65,5 @@ _Render no Marmoset Toolbag 5_
 
 <video autoplay="" class="vjs-tech" controlslist="nodownload" id="video_html5_api" width="765" loop="" playsinline="playsinline" poster="https://cdn.artstation.com/p/thumbnails/001/168/405/thumb.jpg" tabindex="-1" preload="auto" muted="muted"><source media="(min-width: 0px)" src="https://cdn.artstation.com/p/video_sources/001/197/239/martin-abarca-dipogun-vid04.mp4" type="video/mp4"></video>
 
-> Se você deseja ver o artigo completo, pode visitar o post no **[Artstation](https://www.artstation.com/artwork/8blvAn)**.
+> Si vous souhaitez voir l'article complet, vous pouvez visiter le post sur **[Artstation](https://www.artstation.com/artwork/8blvAn)**.
 {: .prompt-info }
