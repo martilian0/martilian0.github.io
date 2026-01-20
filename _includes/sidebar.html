@@ -57,10 +57,8 @@
   <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
   <div class="d-flex flex-wrap gap-2">
     {% for tongue in site.languages %}
-      {% comment %}
-        1. Empezamos con la URL actual
-        2. Quitamos el prefijo de idioma si existe (/es/, /fr/, /br/)
-      {% endcomment %}
+
+      {% comment %} 1. Limpiamos la URL actual de cualquier prefijo de idioma {% endcomment %}
       {% assign clean_url = page.url %}
       {% for lang in site.languages %}
         {% if lang != "en" %}
@@ -69,15 +67,18 @@
         {% endif %}
       {% endfor %}
 
+      {% comment %} 2. Construimos la URL de destino usando la URL absoluta del sitio {% endcomment %}
       {% if tongue == "en" %}
-        {% assign target_href = clean_url | prepend: site.baseurl %}
+        {% comment %} Para EN, usamos la raíz pura del sitio {% endcomment %}
+        {% assign target_href = site.url | append: site.baseurl | append: clean_url | replace: '//', '/' %}
       {% else %}
-        {% assign target_href = clean_url | prepend: tongue | prepend: '/' | prepend: site.baseurl %}
+        {% comment %} Para otros, insertamos el código de idioma {% endcomment %}
+        {% assign target_href = site.url | append: site.baseurl | append: '/' | append: tongue | append: clean_url | replace: '//', '/' %}
       {% endif %}
 
       <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
          style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
-         {% static_href %}href="{{ target_href | replace: '//', '/' }}"{% endstatic_href %}>
+         href="{{ target_href }}">
 
         <span class="lang-flag">
           {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
