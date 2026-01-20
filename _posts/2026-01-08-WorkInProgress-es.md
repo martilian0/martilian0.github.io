@@ -6,7 +6,7 @@ pin: false
 categories: [WORK IN PROGRESS]
 date: 2026-01-08 11:55 -0300
 lang: es
-permalink: _wip
+permalink: /wip/
 image:
   path: /assets/wip/wip-banner.jpg
 ---

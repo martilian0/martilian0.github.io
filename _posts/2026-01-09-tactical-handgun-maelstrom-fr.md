@@ -7,7 +7,7 @@ categories: [PORTFOLIO, GAME ART]
 tags: [3D Art, Game Art, Weapons]
 date: 2026-01-09 01:13 -0300
 lang: fr
-permalink: _tactical-handgun-maelstrom
+permalink: /tactical-handgun-maelstrom/
 image:
   path: https://cdnb.artstation.com/p/assets/images/images/059/687/921/large/martin-abarca-martin-abarca-handgun-00.jpg?1676935496
 

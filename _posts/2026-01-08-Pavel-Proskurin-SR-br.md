@@ -6,7 +6,7 @@ pin: true
 categories: [PORTFOLIO, GAME ART]
 tags: [3D Art, Game Art, Weapons]
 date: 2026-01-08 11:55 -0300
-permalink: _Pavel-Proskurin-SR
+permalink: /Pavel-Proskurin-SR/
 lang: br
 image:
   path: /assets/pavelproskurin/martin-abarca-martin-abarca-pavelsniper-03.jpg

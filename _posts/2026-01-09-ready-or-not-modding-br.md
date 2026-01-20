@@ -6,7 +6,7 @@ pin: false
 categories: [MODDING]
 tags: [UnrealEngine]
 lang: br
-permalink: _ron-modding
+permalink: /ron-modding/
 image:
   path: /assets/ron/modding.jpg
   alt: Ready Or Not Modding
