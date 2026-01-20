@@ -2,7 +2,7 @@
 layout: page
 title: PORTFOLIO
 date: 2026-01-09 16:59 -0300
-redirect_to: /_portfolio/
+redirect_to: /portfolio/
 lang: es
 permalink: _portfolio_
 
