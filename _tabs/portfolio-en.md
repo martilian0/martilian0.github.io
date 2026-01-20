@@ -63,7 +63,7 @@ _Tactical Handgun Model A5 - Maelstrom_
 
 <!-- Cyberpunk Assault RIfle -->
 
-[<img src="https://cdna.artstation.com/p/assets/images/images/059/692/118/large/martin-abarca-martin-abarca-dipogun-01.jpg?1676946589" alt="CyberpunkAR">](_Cyberpunk-AR)
+[<img src="https://cdna.artstation.com/p/assets/images/images/059/692/118/large/martin-abarca-martin-abarca-dipogun-01.jpg?1676946589" alt="CyberpunkAR">](/posts/cyberpunk-ar/)
 
 <!-- HGU Helmet -->
 
