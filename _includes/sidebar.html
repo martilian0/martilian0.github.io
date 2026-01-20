@@ -32,8 +32,6 @@
           <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
             {% capture tab_name %}{{ tab.url | split: '/' | last }}{% endcapture %}
-
-            {% comment %} FIXED: Removed the dot before [tab_name] {% endcomment %}
             <span>{{ site.data.locales[site.active_lang].tabs[tab_name] | default: tab.title | upcase }}</span>
           </a>
         </li>
@@ -45,101 +43,4 @@
     @font-face {
       font-family: 'NotoColorEmojiLimited';
       unicode-range: U+1F1E6-1F1FF;
-      src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
-      font-display: swap;
-    }
-    .lang-flag {
-      font-family: 'NotoColorEmojiLimited', sans-serif;
-      margin-right: 5px;
-    }
-  </style>
-
-  <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
-  <div class="d-flex flex-wrap gap-2">
-    {% for tongue in site.languages %}
-  {% comment %}
-    PASO 1: Determinar la ruta base (limpia) de la página actual.
-    Polyglot maneja las rutas de forma que 'page.url' siempre es la ruta relativa.
-  {% endcomment %}
-
-  {% assign current_path = page.url %}
-
-  {% comment %}
-    PASO 2: Si el idioma que estamos iterando es el por defecto (en),
-    la URL debe ser la ruta original sin prefijos.
-  {% endcomment %}
-  {% if tongue == site.default_lang %}
-    {% assign target_href = current_path | prepend: site.baseurl %}
-  {% else %}
-    {% comment %}
-      Para los demás idiomas (es, fr, br), prependemos el código del idioma.
-      Polyglot se encarga de que esto no se duplique si se hace correctamente.
-    {% endcomment %}
-    {% assign target_href = current_path | prepend: tongue | prepend: '/' | prepend: site.baseurl %}
-  {% endif %}
-
-  {% comment %}
-    PASO 3: EL TRUCO FINAL.
-    Polyglot necesita que los enlaces de cambio de idioma NO sean alterados por su motor interno.
-    Para eso usamos el tag {% static_href %}.
-  {% endcomment %}
-  <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
-     style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
-     {% static_href %}href="{{ target_href | replace: '//', '/' }}"{% endstatic_href %}>
-
-    <span class="lang-flag">
-      {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
-    </span>
-    {{ tongue | upcase }}
-  </a>
-{% endfor %}
-  </div>
-</div>
-
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    {% unless site.theme_mode %}
-      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
-        <i class="fas fa-adjust"></i>
-      </button>
-
-      {% if site.data.contact.size > 0 %}
-        <span class="icon-border"></span>
-      {% endif %}
-    {% endunless %}
-
-    {% for entry in site.data.contact %}
-      {%- assign url = null -%}
-
-      {% case entry.type %}
-        {% when 'github', 'twitter' %}
-          {%- unless site[entry.type].username -%}
-            {%- continue -%}
-          {%- endunless -%}
-          {%- capture url -%}
-            https://{{ entry.type }}.com/{{ site[entry.type].username }}
-          {%- endcapture -%}
-        {% when 'email' %}
-          {%- unless site.social.email -%}
-            {%- continue -%}
-          {%- endunless -%}
-          {%- assign email = site.social.email | split: '@' -%}
-          {%- capture url -%}
-            javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
-          {%- endcapture -%}
-        {% when 'rss' %}
-          {% assign url = '/feed.xml' | relative_url %}
-        {% else %}
-          {% assign url = entry.url %}
-      {% endcase %}
-
-      {% if url %}
-        <a href="{{ url }}" aria-label="{{ entry.type }}"
-          {% unless entry.noblank %}
-            target="_blank" rel="noopener noreferrer"
-          {% endunless %}>
-          <i class="{{ entry.icon }}"></i>
-        </a>
-      {% endif %}
-    {% endfor %}
-  </div>
-</aside>
+      src: url(
