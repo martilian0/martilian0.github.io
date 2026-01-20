@@ -55,26 +55,38 @@
   </style>
 
   <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
-    <div class="d-flex flex-wrap gap-2">
-      {% for tongue in site.languages %}
-        {% if tongue == "en" %}
-          {% assign target_href = page.url | prepend: site.baseurl %}
-        {% else %}
-          {% assign target_href = page.url | prepend: tongue | prepend: '/' | prepend: site.baseurl %}
+  <div class="d-flex flex-wrap gap-2">
+    {% for tongue in site.languages %}
+      {% comment %}
+        1. Empezamos con la URL actual
+        2. Quitamos el prefijo de idioma si existe (/es/, /fr/, /br/)
+      {% endcomment %}
+      {% assign clean_url = page.url %}
+      {% for lang in site.languages %}
+        {% if lang != "en" %}
+          {% capture lang_prefix %}/{{ lang }}/{% endcapture %}
+          {% assign clean_url = clean_url | replace: lang_prefix, "/" %}
         {% endif %}
-
-        <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
-           style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
-           {% static_href %}href="{{ target_href | replace: '//', '/' }}"{% endstatic_href %}>
-
-          <span class="lang-flag">
-            {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
-          </span>
-          {{ tongue | upcase }}
-        </a>
       {% endfor %}
-    </div>
+
+      {% if tongue == "en" %}
+        {% assign target_href = clean_url | prepend: site.baseurl %}
+      {% else %}
+        {% assign target_href = clean_url | prepend: tongue | prepend: '/' | prepend: site.baseurl %}
+      {% endif %}
+
+      <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
+         style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
+         {% static_href %}href="{{ target_href | replace: '//', '/' }}"{% endstatic_href %}>
+
+        <span class="lang-flag">
+          {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
+        </span>
+        {{ tongue | upcase }}
+      </a>
+    {% endfor %}
   </div>
+</div>
 
   <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
     {% unless site.theme_mode %}
