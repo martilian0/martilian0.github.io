@@ -19,6 +19,7 @@
       {% endif %}
     </p>
   </header>
+
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
       <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
@@ -27,13 +28,12 @@
           <span>{{ site.data.locales[site.active_lang].tabs.home | default: "HOME" | upcase }}</span>
         </a>
       </li>
+
       {% for tab in site.tabs %}
         <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
           <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
             {% capture tab_name %}{{ tab.url | split: '/' | last }}{% endcapture %}
-
-            {% comment %} FIXED: Removed the dot before [tab_name] {% endcomment %}
             <span>{{ site.data.locales[site.active_lang].tabs[tab_name] | default: tab.title | upcase }}</span>
           </a>
         </li>
@@ -58,35 +58,19 @@
     <div class="d-flex flex-wrap gap-2">
       {% for tongue in site.languages %}
 
-        {% comment %} 1. Limpiamos la URL actual de prefijos de idioma para evitar acumularlos {% endcomment %}
+        {% comment %} 1. Limpiamos la URL actual de prefijos de idioma {% endcomment %}
         {% assign clean_url = page.url %}
         {% for lang in site.languages %}
           {% capture lang_prefix %}/{{ lang }}/{% endcapture %}
           {% assign clean_url = clean_url | replace: lang_prefix, "/" %}
         {% endfor %}
 
-        {% comment %} 2. Construimos la ruta relativa pura {% endcomment %}
+        {% comment %} 2. Construimos la ruta relativa pura sin site.url {% endcomment %}
         {% if tongue == site.default_lang %}
-          {% comment %} Para el idioma por defecto (EN), la ruta es /la-pagina/ {% endcomment %}
           {% assign target_href = clean_url | prepend: site.baseurl | replace: '//', '/' %}
         {% else %}
-          {% comment %} Para otros idiomas, la ruta es /es/la-pagina/ {% endcomment %}
           {% assign target_href = clean_url | prepend: tongue | prepend: '/' | prepend: site.baseurl | replace: '//', '/' %}
         {% endif %}
 
         <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
-           style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
-           href="{{ target_href }}">
-
-          <span class="lang-flag">
-            {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
-          </span>
-          {{ tongue | upcase }}
-        </a>
-      {% endfor %}
-    </div>
-  </div>
-      {% endif %}
-    {% endfor %}
-  </div>
-</aside>
+           style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--
