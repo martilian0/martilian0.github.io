@@ -52,20 +52,18 @@
   <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
     <div class="d-flex flex-wrap gap-2">
       {% for tongue in site.languages %}
-
-        {% comment %} Limpieza profunda de la URL para el retorno a Inglés {% endcomment %}
-        {% assign clean_url = page.url %}
-        {% assign prefixes = "/es/,/fr/,/br/" | split: "," %}
-        {% for prefix in prefixes %}
-          {% assign clean_url = clean_url | replace: prefix, "/" %}
-        {% endfor %}
+        {% comment %}
+          Construcción de URL:
+          1. Obtenemos la URL actual sin el prefijo de idioma que pone Polyglot
+        {% endcomment %}
+        {% assign page_url = page.url | remote_relative_url %}
 
         {% if tongue == site.default_lang %}
-          {% comment %} URL limpia para el idioma base (Inglés) {% endcomment %}
-          {% assign target_href = clean_url | prepend: site.baseurl | replace: '//', '/' %}
+          {% comment %} Para EN: Quitamos el prefijo de idioma forzando la ruta raíz {% endcomment %}
+          {% assign target_href = page.url | replace_first: '/es/', '/' | replace_first: '/fr/', '/' | replace_first: '/br/', '/' | replace: '//', '/' %}
         {% else %}
-          {% comment %} URL con prefijo para los demás idiomas {% endcomment %}
-          {% assign target_href = clean_url | prepend: tongue | prepend: '/' | prepend: site.baseurl | replace: '//', '/' %}
+          {% comment %} Para los demás: Usamos el helper de Polyglot si está disponible o construimos manualmente {% endcomment %}
+          {% assign target_href = page.url | replace_first: '/es/', '/' | replace_first: '/fr/', '/' | replace_first: '/br/', '/' | prepend: tongue | prepend: '/' | replace: '//', '/' %}
         {% endif %}
 
         <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
