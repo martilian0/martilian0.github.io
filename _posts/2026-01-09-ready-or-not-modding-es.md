@@ -13,12 +13,11 @@ image:
 date: 2026-01-09 01:12 -0300
 ---
 
-Estas son algunas imágenes de un par de experimentos de modding que he estado haciendo el mes pasado.
+¡Hola! He creado esta publicación para compartir algunas imágenes de un par de experimentos de modding que he estado realizando el mes pasado.
 
-Incluí un Sombrero Mexicano en el juego solo por diversión, para ver si el modelo se mostraba correctamente dentro del juego, con texturas y todo.
+He estado experimentando con las herramientas actuales de la comunidad de modding de Ready or Not, y he logrado incluir con éxito algo de contenido en el juego. Incluí un Sombrero Mexicano solo por diversión, para ver si el modelo se mostraba correctamente dentro del juego con sus texturas y todo lo demás.
 
-También añadí nuevas líneas de voz para el jugador y los NPCs.
-En los siguientes videos pueden escuchar una línea de voz mexicana gritando ¡Viva México! y frases similares, y en el siguiente, a un chileno enojado por ser arrestado y hablando con el acento distintivo que usan los miembros de bandas delictuales por aquí (coa).
+También añadí nuevas líneas de voz para el jugador y los NPCs:
 
 {%
   include embed/video.html
@@ -29,7 +28,7 @@ En los siguientes videos pueden escuchar una línea de voz mexicana gritando ¡V
   muted=false
 %}
 
-Hay un término de la jerga española chilena usado para describir a personas agresivas que no siguen las normas sociales; usualmente son miembros de bandas y los llamamos [flaites](https://en.wikipedia.org/wiki/Flaite). Se les puede ver muy a menudo vistiendo camisetas de su club de fútbol favorito, algo así como los hooligans pero de Chile. Sin embargo, es un término general; esto no significa que todos los que usan estas camisetas sean flaites, pero pensé que sería algo cultural que nosotros (como chilenos) podemos reconocer fácilmente y que encajaría muy bien como los "malos" para este juego.
+Hay un término de la jerga española chilena usado para describir a personas agresivas que no siguen las normas sociales; usualmente son miembros de bandas y los llamamos [flaites](https://en.wikipedia.org/wiki/Flaite). Se les puede ver muy a menudo vistiendo camisetas de su club de fútbol favorito, algo así como los hooligans pero de Chile. Sin embargo, es un término general, esto no significa que todos los que usan estas camisetas sean flaites, pero pensé que sería algo cultural que nosotros (como chilenos) podemos reconocer fácilmente y que encajaría muy bien como los "malos" para este juego.
 
 ![img-description](/assets/ron/ron4.jpg)
 _Sospechosos usando camisetas de fútbol chileno_

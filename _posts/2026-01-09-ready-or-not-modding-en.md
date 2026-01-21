@@ -13,13 +13,17 @@ image:
 date: 2026-01-09 01:12 -0300
 ---
 
-This is some footage from a couple of modding experiments I've been doing in the past month.
+Hello! I've created this post to share some footage from a couple of modding experiments I've been doing in the past month.
 
-I included a Mexican Sombrero in the game just for fun, and see if the model was able to display properly in game, with textures and everything.
+I've been experimenting with the current tools of the Ready or Not modding community, and I've been able to succesfully include some content in the game. I included a Mexican Sombrero in the game just for fun just to see if the model was able to display properly in game with textures and everything.
 
 I also added new voicelines for the game player and npcs.
-In the following videos you can hear a mexican voiceline shouting Viva Mexico! and similar phrases, and in the next one, a Chilean guy being mad for being arrested and speaking with a distinct accent used by gang members in here.
 
+<!--
+
+ In the following videos you can hear a mexican voiceline shouting Viva Mexico! and similar phrases, and in the next one, a Chilean guy being mad for being arrested and speaking with a distinct accent used by gang members in here.
+
+-->
 
 {%
   include embed/video.html

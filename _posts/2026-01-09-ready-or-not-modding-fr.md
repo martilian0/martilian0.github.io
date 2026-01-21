@@ -13,12 +13,11 @@ image:
 date: 2026-01-09 01:12 -0300
 ---
 
-Voici quelques images de quelques expériences de modding que j'ai réalisées le mois dernier.
+Salut ! J'ai créé cet article pour partager quelques séquences de deux expériences de modding que j'ai réalisées le mois dernier.
 
-J'ai inclus un Sombrero Mexicain dans le jeu juste pour s'amuser, et pour voir si le modèle s'affichait correctement en jeu, avec les textures et tout le reste.
+J'ai expérimenté les outils actuels de la communauté de modding de Ready or Not, et j'ai pu inclure avec succès du contenu dans le jeu. J'ai ajouté un Sombrero Mexicain juste pour le plaisir, pour voir si le modèle s'affichait correctement en jeu avec les textures et tout le reste.
 
 J'ai également ajouté de nouvelles lignes de voix pour le joueur et les PNJ.
-Dans les vidéos suivantes, vous pouvez entendre une voix mexicaine crier "Viva Mexico !" et des phrases similaires, et dans la suivante, un Chilien furieux d'être arrêté, parlant avec l'accent distinctif utilisé par les membres de gangs ici.
 
 {%
   include embed/video.html
