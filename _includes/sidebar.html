@@ -52,15 +52,19 @@
   <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
     <div class="d-flex flex-wrap gap-2">
       {% for tongue in site.languages %}
+
+        {% comment %} Limpieza profunda de la URL para el retorno a Inglés {% endcomment %}
         {% assign clean_url = page.url %}
-        {% for lang in site.languages %}
-          {% capture lang_prefix %}/{{ lang }}/{% endcapture %}
-          {% assign clean_url = clean_url | replace: lang_prefix, "/" %}
+        {% assign prefixes = "/es/,/fr/,/br/" | split: "," %}
+        {% for prefix in prefixes %}
+          {% assign clean_url = clean_url | replace: prefix, "/" %}
         {% endfor %}
 
         {% if tongue == site.default_lang %}
+          {% comment %} URL limpia para el idioma base (Inglés) {% endcomment %}
           {% assign target_href = clean_url | prepend: site.baseurl | replace: '//', '/' %}
         {% else %}
+          {% comment %} URL con prefijo para los demás idiomas {% endcomment %}
           {% assign target_href = clean_url | prepend: tongue | prepend: '/' | prepend: site.baseurl | replace: '//', '/' %}
         {% endif %}
 
