@@ -46,11 +46,16 @@ Este projeto me ajudou a descobrir a importância de prestar atenção em como s
   muted=true
 %}
 
+<!-- Section pendient to edit
+
 Maecenas et tortor consectetur, malesuada leo sed, placerat diam. Integer pellentesque tortor et tellus interdum, ut blandit metus sodales. Aenean dolor est, blandit et facilisis et, viverra in ipsum. Sed bibendum auctor dolor, vitae efficitur sem laoreet eget. Duis nec congue turpis, vel aliquet sapien. Donec eget venenatis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sodales ipsum nec dolor scelerisque tincidunt.
 ![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }
 
-Ao reunir material de referência e tentar entender em qual arma da vida real este conceito foi baseado, descobri que o Lee Enfield No.4 era o design mais próximo.
+
+Gathering reference material and trying to understand from what real life weapon this concept was based on,I found that the Lee Enfield No.4 was the closest design.
 Aliquam tincidunt dapibus velit, in consectetur ipsum facilisis in. Maecenas interdum odio arcu, quis eleifend ante tincidunt nec. Fusce non tristique orci. Vivamus hendrerit viverra risus et porttitor. Nam vel dolor vestibulum libero tincidunt scelerisque id non mi. In rhoncus vitae mi non porta. Cras viverra tellus ut mollis lacinia. Donec imperdiet lacinia blandit.
+
+-->
 
 ![img-description](https://cdnb.artstation.com/p/assets/images/images/059/692/109/large/martin-abarca-martin-abarca-dipogun-00.jpg?1676946580)
 _Render no Marmoset Toolbag 5_
