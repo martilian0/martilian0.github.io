@@ -4,7 +4,7 @@ title: PORTFOLIO
 date: 2026-01-09 16:59 -0300
 redirect_to: /portfolio/
 lang: br
-permalink: /portfolio/
+permalink: /portfolio-post/
 
 pin: true
 image:
