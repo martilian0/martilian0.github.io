@@ -47,6 +47,11 @@
       font-display: swap;
     }
     .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
+
+    /* Clase para dar más grosor a los códigos de idioma */
+    .lang-code {
+      font-weight: 700; /* Grosor tipo bold */
+    }
   </style>
 
   <div class="lang-selector w-100 border-top mt-auto pt-3 mb-3">
@@ -64,7 +69,7 @@
           <span class="lang-flag">
             {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
           </span>
-          {{ tongue | upcase }}
+          <span class="lang-code">{{ tongue | upcase }}</span>
         </a>
       {% endfor %}
     </div>
