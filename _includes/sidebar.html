@@ -47,9 +47,11 @@
       font-display: swap;
     }
     .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
+    /* Clase para aumentar el grosor de los textos de idioma */
+    .lang-text { font-weight: 600; }
   </style>
 
-  <div class="lang-selector w-100 border-top mt-auto pt-3 mb-3">
+  <div class="lang-selector w-100 border-top pt-3 mt-3">
     <div class="d-flex justify-content-center flex-wrap gap-2">
       {% for tongue in site.languages %}
         {% if tongue == site.default_lang %}
@@ -58,19 +60,19 @@
           {% assign target_href = page.url | prepend: tongue | prepend: '/' %}
         {% endif %}
 
-        <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
+        <a class="nav-link {% if tongue == site.active_lang %}active{% endif %}"
            style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
            href="{{ target_href }}">
           <span class="lang-flag">
             {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
           </span>
-          {{ tongue | upcase }}
+          <span class="lang-text">{{ tongue | upcase }}</span>
         </a>
       {% endfor %}
     </div>
   </div>
 
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100 mb-3">
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>
