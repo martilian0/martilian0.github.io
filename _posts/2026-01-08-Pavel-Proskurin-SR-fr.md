@@ -52,8 +52,8 @@ La raison pour laquelle je ne les ai pas incluses à la fin est que l'animation 
 
 
 
-![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }Une autre chose que j'aimerais mentionner est que j'ai appris quelques détails sur ces armes qui ont une valeur culturelle et historique intéressante.
-Par exemple, pendant que je texturais le modèle, j'ai réalisé que l'arme portait des marques sur les pièces métalliques. Après quelques recherches sur Google, j'ai découvert que ces marques étaient en fait une méthode d'identification et de catégorisation : du lieu et du fabricant d'origine, aux modifications du canon pour les munitions à haute vélocité, en passant par les marques indiquant si elle était la propriété de la Couronne ou de l'armée, et même des marques pour l'usage après-guerre ; au cas où ces armes voyageraient, elles permettaient de reconnaître et de savoir si l'arme avait été acquise légalement ou non.
+![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }Une autre chose que j'aimerais mentionner est que j'ai appris quelques détails sur ces armes qui m'ont fait apprécier encore plus leur valeur culturelle et historique.
+Par exemple, pendant que je texturais le modèle, j'ai réalisé que l'arme portait des marques sur les pièces métalliques. Après quelques recherches sur Google, j'ai découvert que ces marques étaient en fait une méthode d'identification et de catégorisation, dans le but de savoir où et par qui elle avait été fabriquée, de connaître les modifications du canon (comme s'il avait été conçu pour des munitions à haute vélocité), les marques indiquant si elle était la propriété de la Couronne ou de l'armée, et même des marques pour l'usage après-guerre ; au cas où ces armes voyageraient, elles permettaient de reconnaître et de savoir si l'arme avait été acquise légalement ou non.
 
 
 

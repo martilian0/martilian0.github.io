@@ -51,8 +51,8 @@ A razão pela qual não as incluí no final foi porque a animação precisava se
 
 
 
-![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }Outra coisa que eu gostaria de mencionar é que aprendi algumas coisas sobre essas armas que têm um valor cultural e histórico interessante.
-Por exemplo, quando eu estava texturizando o modelo, percebi que a arma tem algumas marcas nas peças de metal e, depois de pesquisar aqui e ali, descobri que essas marcas eram, na verdade, um método de identificação e categorização: desde onde e por quem foi fabricada, até modificações no canhão para munição de alta velocidade, marcas que indicavam se era propriedade da coroa ou de uso militar, e até marcas para uso pós-guerra; caso essas armas viajassem, eles poderiam reconhecer e rastrear se era uma arma adquirida legalmente ou não.
+![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }Outra coisa que eu gostaria de mencionar é que aprendi algumas coisas sobre essas armas que me fizeram apreciar ainda mais o seu valor cultural e histórico.
+Por exemplo, quando eu estava texturizando o modelo, percebi que a arma tem algumas marcas nas peças de metal e, depois de pesquisar aqui e ali, descobri que essas marcas eram, na verdade, um método de identificação e categorização. O objetivo era saber onde e por quem foi fabricada, conhecer as modificações no canhão (como se foi feito para munição de alta velocidade), marcas que indicavam se era propriedade da coroa ou de uso militar, e até marcas para uso pós-guerra; caso essas armas viajassem, eles poderiam reconhecer e rastrear se era uma arma adquirida legalmente ou não.
 
 
 

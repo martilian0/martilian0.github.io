@@ -49,8 +49,8 @@ The reason i did not include them at the end was because the animation needed to
 %}
 
 
-![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }Another thing I like to mention is that I've learned a couple of things about these weapons that have some interesting cultural and historical value.
-For example when I was texturing the model, I've realized that the weapon have some marks in the metal pieces, and after googling here and there I found that these marks were actually a method of identification and categorization, from where and by who it was manifcatured, to modifications in the cannon for high velocity rounds, marks that indicated if it was property of the crown or it has military ownership, and even marks for use after war, in case this weapons traveled, they could recognize and track if it was a weapon acquired legally, or not.
+![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }Another thing I like to mention is that I've learned a couple of things about these weapons that made me appreciate even more the cultural and historical value.
+For example when I was texturing the model, I've realized the weapon have some marks in the metal pieces, and after googling here and there I found that these marks were actually a method of identification and categorization, with the goal of knowing from where and by who it was manifcatured, to know modifications in the cannon like if it was made for high velocity rounds, marks that indicated if it was property of the crown or it has military ownership, and even marks for use after war, in case this weapons traveled, they could recognize and track if it was a weapon acquired legally, or not.
 
 
 
