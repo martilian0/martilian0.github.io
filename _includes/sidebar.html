@@ -49,7 +49,7 @@
     .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
   </style>
 
-  <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
+  <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-2">
     <div class="d-flex flex-wrap gap-2">
       {% for tongue in site.languages %}
         {% if tongue == site.default_lang %}
@@ -70,7 +70,7 @@
     </div>
   </div>
 
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
+  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100 border-top pt-3">
     {% unless site.theme_mode %}
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>
