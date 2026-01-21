@@ -48,24 +48,25 @@
     }
     .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
 
-    /* AJUSTES DE GROSOR Y COLOR DE LA LÍNEA */
+    /* LÍNEA DIVISORIA MÁS GRUESA Y CON MARGEN */
     .custom-sidebar-divider {
-      border-top: 2px solid rgba(0, 0, 0, 0.1) !important; /* Grosor aumentado a 2px */
+      border-top: 2px solid rgba(0, 0, 0, 0.08) !important;
       width: 100%;
+      margin-top: 1.5rem !important; /* Espacio por encima de la línea */
     }
 
     [data-mode='dark'] .custom-sidebar-divider {
-      border-top: 2px solid rgba(255, 255, 255, 0.1) !important;
+      border-top: 2px solid rgba(255, 255, 255, 0.08) !important;
     }
 
-    /* Espaciado extra entre los elementos de idioma */
-    .gap-custom {
-      gap: 1.25rem !important; /* Espacio horizontal entre banderas */
+    /* ESPACIADO GENEROSO ENTRE IDIOMAS */
+    .gap-extra {
+      gap: 1.5rem !important;
     }
   </style>
 
-  <div class="lang-selector mt-auto pt-4 mb-3 custom-sidebar-divider">
-    <div class="d-flex justify-content-center flex-wrap gap-custom">
+  <div class="lang-selector mt-auto pt-5 mb-3 custom-sidebar-divider">
+    <div class="d-flex justify-content-center flex-wrap gap-extra">
       {% for tongue in site.languages %}
         {% if tongue == site.default_lang %}
           {% assign target_href = page.url | prepend: " " %}
