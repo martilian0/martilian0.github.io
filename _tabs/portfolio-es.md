@@ -59,7 +59,7 @@ _Tactical Handgun Model A5 - Maelstrom_
 
 <!-- Pavel Proskurin Sniper -->
 
-[<img src="https://cdna.artstation.com/p/assets/images/images/059/693/060/large/martin-abarca-martin-abarca-pavelsniper-03.jpg?1676949473" alt="Pavel Proscurin Sniper">](/_Pavel-Proskurin-SR/)
+[<img src="https://cdna.artstation.com/p/assets/images/images/059/693/060/large/martin-abarca-martin-abarca-pavelsniper-03.jpg?1676949473" alt="Pavel Proscurin Sniper">](/Pavel-Proskurin-SR/)
 
 <!-- Cyberpunk Assault RIfle -->
 
