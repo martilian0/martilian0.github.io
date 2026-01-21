@@ -49,8 +49,8 @@
     .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
   </style>
 
-  <div class="lang-selector w-100 border-top mt-auto pt-3 mb-3">
-    <div class="d-flex justify-content-center flex-wrap gap-2">
+  <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
+    <div class="d-flex flex-wrap gap-2">
       {% for tongue in site.languages %}
         {% if tongue == site.default_lang %}
           {% assign target_href = page.url | prepend: " " %}
