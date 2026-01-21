@@ -38,12 +38,12 @@ Este projeto me ajudou a descobrir a importância de prestar atenção em como s
 
 
 {%
-  include embed/video.html
-  src='https://video.gumlet.io/696069beac93fe085655e2c9/696e9c5a6f4a3a8ce103d397/main.mp4'
-  title='Processo de texturização do mapa de roughness'
-  autoplay=true
-  loop=true
-  muted=true
+  include embed/video.html
+  src='https://video.gumlet.io/696069beac93fe085655e2c9/696e9c5a6f4a3a8ce103d397/main.mp4'
+  title='Roughness map texturing process'
+  autoplay=true
+  loop=true
+  muted=true
 %}
 
 <!-- Section pendient to edit
