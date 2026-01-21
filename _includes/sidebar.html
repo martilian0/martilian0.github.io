@@ -47,9 +47,24 @@
       font-display: swap;
     }
     .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
+
+    /* Grosor aumentado para los textos de idioma */
+    .lang-label {
+      font-weight: 700 !important;
+      font-size: 0.85rem;
+    }
+
+    /* Forzar que la línea divisoria ocupe todo el ancho visual */
+    .sidebar-divider {
+      width: 100%;
+      border-top: 1px solid var(--main-border-color);
+      margin-top: auto;
+    }
   </style>
 
-  <div class="lang-selector w-100 border-top mt-auto pt-3 mb-3">
+  <div class="sidebar-divider"></div>
+
+  <div class="lang-selector w-100 pt-3 mb-3">
     <div class="d-flex justify-content-center flex-wrap gap-2">
       {% for tongue in site.languages %}
         {% if tongue == site.default_lang %}
@@ -58,13 +73,13 @@
           {% assign target_href = page.url | prepend: tongue | prepend: '/' %}
         {% endif %}
 
-        <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
-           style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
+        <a class="nav-link d-flex align-items-center {% if tongue == site.active_lang %}active{% endif %}"
+           style="padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
            href="{{ target_href }}">
           <span class="lang-flag">
             {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
           </span>
-          {{ tongue | upcase }}
+          <span class="lang-label">{{ tongue | upcase }}</span>
         </a>
       {% endfor %}
     </div>
