@@ -40,7 +40,7 @@ Este proyecto me ayudó a descubrir la importancia de prestar atención a cómo 
 {%
   include embed/video.html
   src='https://video.gumlet.io/696069beac93fe085655e2c9/696e9c5a6f4a3a8ce103d397/main.mp4'
-  title='Roughness map texturing process'
+  title='Proceso de texturizado del mapa de roughness'
   autoplay=true
   loop=true
   muted=true
