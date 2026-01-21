@@ -1,12 +1,10 @@
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
   <header class="profile-wrapper">
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
-      {%- if site.avatar != empty and site.avatar -%}
-        {%- capture avatar_url -%}
-          {% include media-url.html src=site.avatar %}
-        {%- endcapture -%}
-        <img src="{{- avatar_url -}}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
-      {%- endif -%}
+      {% if site.avatar != empty and site.avatar %}
+        {% capture avatar_url %}{% include media-url.html src=site.avatar %}{% endcapture %}
+        <img src="{{ avatar_url }}" width="112" height="112" alt="avatar" onerror="this.style.display='none'">
+      {% endif %}
     </a>
 
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
@@ -22,14 +20,15 @@
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
     <ul class="nav">
-      <li class="nav-item{% if page.layout == 'home' %}{{ " active" }}{% endif %}">
+      <li class="nav-item{% if page.layout == 'home' %} active{% endif %}">
         <a href="{{ '/' | relative_url }}" class="nav-link">
           <i class="fa-fw fas fa-home"></i>
           <span>{{ site.data.locales[site.active_lang].tabs.home | default: "HOME" | upcase }}</span>
         </a>
       </li>
+
       {% for tab in site.tabs %}
-        <li class="nav-item{% if tab.url == page.url %}{{ " active" }}{% endif %}">
+        <li class="nav-item{% if tab.url == page.url %} active{% endif %}">
           <a href="{{ tab.url | relative_url }}" class="nav-link">
             <i class="fa-fw {{ tab.icon }}"></i>
             {% capture tab_name %}{{ tab.url | split: '/' | last }}{% endcapture %}
@@ -47,29 +46,21 @@
       src: url(https://raw.githack.com/googlefonts/noto-emoji/main/fonts/NotoColorEmoji.ttf);
       font-display: swap;
     }
-    .lang-flag {
-      font-family: 'NotoColorEmojiLimited', sans-serif;
-      margin-right: 5px;
-    }
-    /* Asegura que la línea sea visible en el tema Chirpy */
-    .custom-divider {
-      border-top: 1px solid var(--main-border-color) !important;
-    }
+    .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
   </style>
 
-  <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 pt-3 mt-auto custom-divider">
-    <div class="d-flex flex-wrap gap-2">
+  <div class="lang-selector w-100 border-top mt-auto pt-3 mb-3">
+    <div class="d-flex justify-content-center flex-wrap gap-2">
       {% for tongue in site.languages %}
-        {% if tongue == "en" %}
-          {% assign target_href = page.url | prepend: site.baseurl %}
+        {% if tongue == site.default_lang %}
+          {% assign target_href = page.url | prepend: " " %}
         {% else %}
-          {% assign target_href = page.url | prepend: tongue | prepend: '/' | prepend: site.baseurl %}
+          {% assign target_href = page.url | prepend: tongue | prepend: '/' %}
         {% endif %}
 
         <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
            style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
-           {% static_href %}href="{{ target_href | replace: '//', '/' }}"{% endstatic_href %}>
-
+           href="{{ target_href }}">
           <span class="lang-flag">
             {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
           </span>
@@ -84,42 +75,29 @@
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>
       </button>
-
-      {% if site.data.contact.size > 0 %}
-        <span class="icon-border"></span>
-      {% endif %}
+      {% if site.data.contact.size > 0 %}<span class="icon-border"></span>{% endif %}
     {% endunless %}
 
     {% for entry in site.data.contact %}
-      {%- assign url = null -%}
-
+      {% assign contact_url = "" %}
       {% case entry.type %}
         {% when 'github', 'twitter' %}
-          {%- unless site[entry.type].username -%}
-            {%- continue -%}
-          {%- endunless -%}
-          {%- capture url -%}
-            https://{{ entry.type }}.com/{{ site[entry.type].username }}
-          {%- endcapture -%}
+          {% if site[entry.type].username %}
+            {% capture contact_url %}https://{{ entry.type }}.com/{{ site[entry.type].username }}{% endcapture %}
+          {% endif %}
         {% when 'email' %}
-          {%- unless site.social.email -%}
-            {%- continue -%}
-          {%- endunless -%}
-          {%- assign email = site.social.email | split: '@' -%}
-          {%- capture url -%}
-            javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
-          {%- endcapture -%}
+          {% if site.social.email %}
+            {% assign email = site.social.email | split: '@' %}
+            {% capture contact_url %}javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'){% endcapture %}
+          {% endif %}
         {% when 'rss' %}
-          {% assign url = '/feed.xml' | relative_url %}
+          {% assign contact_url = '/feed.xml' | relative_url %}
         {% else %}
-          {% assign url = entry.url %}
+          {% assign contact_url = entry.url %}
       {% endcase %}
 
-      {% if url %}
-        <a href="{{ url }}" aria-label="{{ entry.type }}"
-          {% unless entry.noblank %}
-            target="_blank" rel="noopener noreferrer"
-          {% endunless %}>
+      {% if contact_url != "" %}
+        <a href="{{ contact_url }}" aria-label="{{ entry.type }}" {% unless entry.noblank %}target="_blank" rel="noopener noreferrer"{% endunless %}>
           <i class="{{ entry.icon }}"></i>
         </a>
       {% endif %}
