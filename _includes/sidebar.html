@@ -48,25 +48,26 @@
     }
     .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
 
-    /* LÍNEA DIVISORIA MÁS GRUESA Y CON MARGEN */
+    /* LÍNEA DIVISORIA EXACTA A DESIGN_OK */
     .custom-sidebar-divider {
-      border-top: 2px solid rgba(0, 0, 0, 0.08) !important;
+      border-top: 1.5px solid rgba(0, 0, 0, 0.08) !important;
       width: 100%;
-      margin-top: 1.5rem !important; /* Espacio por encima de la línea */
+      margin-top: 20px !important; /* Espacio antes de la línea */
+      padding-top: 25px !important; /* Espacio entre línea e idiomas (Sangría vertical) */
     }
 
     [data-mode='dark'] .custom-sidebar-divider {
-      border-top: 2px solid rgba(255, 255, 255, 0.08) !important;
+      border-top: 1.5px solid rgba(255, 255, 255, 0.1) !important;
     }
 
-    /* ESPACIADO GENEROSO ENTRE IDIOMAS */
-    .gap-extra {
-      gap: 1.5rem !important;
+    /* ESPACIADO ENTRE IDIOMAS IDÉNTICO A LA FOTO */
+    .lang-gap {
+      gap: 18px !important;
     }
   </style>
 
-  <div class="lang-selector mt-auto pt-5 mb-3 custom-sidebar-divider">
-    <div class="d-flex justify-content-center flex-wrap gap-extra">
+  <div class="lang-selector mt-auto mb-3 custom-sidebar-divider">
+    <div class="d-flex justify-content-center flex-wrap lang-gap">
       {% for tongue in site.languages %}
         {% if tongue == site.default_lang %}
           {% assign target_href = page.url | prepend: " " %}
@@ -75,7 +76,7 @@
         {% endif %}
 
         <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
-           style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
+           style="font-size: 0.85rem; padding: 0.2rem 0.2rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
            href="{{ target_href }}">
           <span class="lang-flag">
             {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
