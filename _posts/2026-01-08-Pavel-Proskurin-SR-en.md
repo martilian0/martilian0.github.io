@@ -49,17 +49,14 @@ The reason i did not include them at the end was because the animation needed to
 %}
 
 
-
-
-Another thing I like to mention is that I've learned a couple of things about these weapons that have some interesting cultural and historical value.
+![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }Another thing I like to mention is that I've learned a couple of things about these weapons that have some interesting cultural and historical value.
 For example when I was texturing the model, I've realized that the weapon have some marks in the metal pieces, and after googling here and there I found that these marks were actually a method of identification and categorization, from where and by who it was manifcatured, to modifications in the cannon for high velocity rounds, marks that indicated if it was property of the crown or it has military ownership, and even marks for use after war, in case this weapons traveled, they could recognize and track if it was a weapon acquired legally, or not.
-![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }
 
 
 
 
-![img-description](https://cdna.artstation.com/p/assets/images/images/059/693/060/large/martin-abarca-martin-abarca-pavelsniper-03.jpg?1676949473)
-_Marmoset Toolbag 5 Render_
+
+![img-description](https://cdna.artstation.com/p/assets/images/images/059/693/060/large/martin-abarca-martin-abarca-pavelsniper-03.jpg?1676949473)_Marmoset Toolbag 5 Render_
 
 
 <video autoplay="" class="vjs-tech" controlslist="nodownload" id="video_html5_api" width="800" loop="" muted="muted" playsinline="playsinline" poster="https://cdn.artstation.com/p/thumbnails/001/168/564/thumb.jpg" tabindex="-1" preload="auto"><source media="(min-width: 0px)" src="https://cdn.artstation.com/p/video_sources/001/197/406/martin-abarca-pavelsniper-vid00.mp4" type="video/mp4"></video>

@@ -51,15 +51,14 @@ A razão pela qual não as incluí no final foi porque a animação precisava se
 
 
 
-Outra coisa que eu gostaria de mencionar é que aprendi algumas coisas sobre essas armas que têm um valor cultural e histórico interessante.
+![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }Outra coisa que eu gostaria de mencionar é que aprendi algumas coisas sobre essas armas que têm um valor cultural e histórico interessante.
 Por exemplo, quando eu estava texturizando o modelo, percebi que a arma tem algumas marcas nas peças de metal e, depois de pesquisar aqui e ali, descobri que essas marcas eram, na verdade, um método de identificação e categorização: desde onde e por quem foi fabricada, até modificações no canhão para munição de alta velocidade, marcas que indicavam se era propriedade da coroa ou de uso militar, e até marcas para uso pós-guerra; caso essas armas viajassem, eles poderiam reconhecer e rastrear se era uma arma adquirida legalmente ou não.
-![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }
 
 
 
 
-![img-description](https://cdna.artstation.com/p/assets/images/images/059/693/060/large/martin-abarca-martin-abarca-pavelsniper-03.jpg?1676949473)
-_Render no Marmoset Toolbag 5__
+
+![img-description](https://cdna.artstation.com/p/assets/images/images/059/693/060/large/martin-abarca-martin-abarca-pavelsniper-03.jpg?1676949473)_Render no Marmoset Toolbag 5__
 
 
 <video autoplay="" class="vjs-tech" controlslist="nodownload" id="video_html5_api" width="800" loop="" muted="muted" playsinline="playsinline" poster="https://cdn.artstation.com/p/thumbnails/001/168/564/thumb.jpg" tabindex="-1" preload="auto"><source media="(min-width: 0px)" src="https://cdn.artstation.com/p/video_sources/001/197/406/martin-abarca-pavelsniper-vid00.mp4" type="video/mp4"></video>
