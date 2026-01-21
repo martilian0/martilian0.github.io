@@ -56,3 +56,7 @@ for Virtual Reality.
 
 ### __English__  🇬🇧
 > *     Fluent
+
+# __Software proficiency__ 💻
+
+![img-description](/assets/softwares/adobe-after-effects.svg) ![img-description](/assets/softwares/adobe-illustrator.svg) ![img-description](/assets/softwares/adobe-photoshop.svg) ![img-description](/assets/softwares/adobe-premiere.svg)
