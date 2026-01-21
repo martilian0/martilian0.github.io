@@ -13,11 +13,12 @@ image:
 date: 2026-01-09 01:12 -0300
 ---
 
-Aqui estão algumas imagens de alguns experimentos de modding que venho fazendo no último mês.
+Aqui estão algumas imagens de um par de experimentos de modding que tenho feito no último mês.
 
-Incluí um Sombrero mexicano apenas por diversão, para ver se o modelo conseguia ser exibido corretamente no jogo, com texturas e tudo mais.
+Incluí um Sombrero Mexicano no jogo apenas por diversão, para ver se o modelo era exibido corretamente dentro do jogo, com texturas e tudo mais.
 
-E também adicionei novas falas (voicelines) para o jogo e NPCs.
+Também adicionei novas linhas de voz para o jogador e para os NPCs.
+Nos vídeos a seguir, vocês podem ouvir uma voz mexicana gritando "Viva México!" e frases semelhantes e, no próximo, um chileno irritado por ser preso e falando com o sotaque distinto usado por membros de gangues por aqui.
 
 {%
   include embed/video.html
@@ -28,7 +29,7 @@ E também adicionei novas falas (voicelines) para o jogo e NPCs.
   muted=false
 %}
 
-Aqui, as pessoas que não seguem as normas sociais costumam ser chamadas de "flaites". Eles usam camisas de seus times de futebol favoritos, tipo hooligans, mas do Chile. Então achei que eles combinariam muito bem como membros de gangues RS.
+Existe uma gíria do espanhol chileno usada para descrever pessoas agressivas que não seguem as normas sociais; geralmente são membros de gangues e os chamamos de [flaites](https://en.wikipedia.org/wiki/Flaite). É muito comum vê-los vestindo camisas de seu clube de futebol favorito, um pouco como os hooligans, mas do Chile. No entanto, é um termo geral; isso não significa que todos que usam essas camisas sejam flaites, mas pensei que seria algo cultural que nós (como chilenos) podemos reconhecer facilmente e que se encaixaria muito bem como os "vilões" deste jogo.
 
 ![img-description](/assets/ron/ron4.jpg)
 _Suspeitos vestindo camisas de times de futebol chilenos_

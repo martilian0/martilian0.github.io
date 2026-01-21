@@ -15,9 +15,10 @@ date: 2026-01-09 01:12 -0300
 
 This is some footage from a couple of modding experiments I've been doing in the past month.
 
-I included a Mexican Sombrero just for fun, and see if the model was able to display properly in game, with textures and everything.
+I included a Mexican Sombrero in the game just for fun, and see if the model was able to display properly in game, with textures and everything.
 
-And also I added new voicelines for the game and npcs.
+I also added new voicelines for the game player and npcs.
+In the following videos you can hear a mexican voiceline shouting Viva Mexico! and similar phrases, and in the next one, a Chilean guy being mad for being arrested and speaking with a distinct accent used by gang members in here.
 
 
 {%
@@ -30,10 +31,10 @@ And also I added new voicelines for the game and npcs.
 %}
 
 
-Here the people that dont follow social norms usually are called flaites. They wear shirts from their favorite soccer sports club, kinda like hooligans but from Chile. So I thought they will fit really well as gang members LOL.
+There is a Chilean Spanish slang term used to describe aggressive people that dont follow social norms, they are usually gang members and we call them [flaites](https://en.wikipedia.org/wiki/Flaite). You can see them very often wearing shirts from their favorite soccer sports club, kinda like hooligans but from Chile. Is a general term though, this doesn't mean that everyone wearing these shirts are flaites, but I thought it could be something cultural that we (as chileans) can recognize easily and could fit really well as the bad guys for this game.
 
 ![img-description](/assets/ron/ron4.jpg)
-_Suspects carrying Chilean soccer Tshirts_
+_Suspects wearing Chilean soccer teams Tshirts_
 
 
 {%

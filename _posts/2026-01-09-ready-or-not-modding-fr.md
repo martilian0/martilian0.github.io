@@ -13,11 +13,12 @@ image:
 date: 2026-01-09 01:12 -0300
 ---
 
-Voici quelques séquences de quelques expériences de modding que j'ai réalisées le mois dernier.
+Voici quelques images de quelques expériences de modding que j'ai réalisées le mois dernier.
 
-J'ai inclus un Sombrero mexicain juste pour m'amuser, et voir se le modèle s'affichait correctement en jeu, avec les textures et tout le reste.
+J'ai inclus un Sombrero Mexicain dans le jeu juste pour s'amuser, et pour voir si le modèle s'affichait correctement en jeu, avec les textures et tout le reste.
 
-J'ai également ajouté de nouvelles lignes de voix (voicelines) pour le jeu et les PNJ.
+J'ai également ajouté de nouvelles lignes de voix pour le joueur et les PNJ.
+Dans les vidéos suivantes, vous pouvez entendre une voix mexicaine crier "Viva Mexico !" et des phrases similaires, et dans la suivante, un Chilien furieux d'être arrêté, parlant avec l'accent distinctif utilisé par les membres de gangs ici.
 
 {%
   include embed/video.html
@@ -28,7 +29,7 @@ J'ai également ajouté de nouvelles lignes de voix (voicelines) pour le jeu et 
   muted=false
 %}
 
-Ici, les personnes qui ne suivent pas les normes sociales sont généralement appelées "flaites". Ils portent des maillots de leurs clubs de football préférés, un peu comme des hooligans mais du Chili. J'ai donc pensé qu'ils conviendraient très bien comme membres de gangs MDR.
+Il existe un terme d'argot espagnol chilien utilisé pour décrire des personnes agressives qui ne suivent pas les normes sociales ; ce sont généralement des membres de gangs et nous les appelons [flaites](https://en.wikipedia.org/wiki/Flaite). On peut les voir très souvent portant des maillots de leur club de football préféré, un peu comme des hooligans mais du Chili. C'est cependant un terme général ; cela ne signifie pas que tous ceux qui portent ces maillots sont des flaites, mais j'ai pensé que c'était un élément culturel que nous (en tant que Chiliens) pouvons reconnaître facilement et qui pourrait très bien convenir pour les "méchants" de ce jeu.
 
 ![img-description](/assets/ron/ron4.jpg)
 _Suspects portant des maillots de football chiliens_
