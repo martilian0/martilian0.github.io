@@ -12,12 +12,6 @@ image:
   path: /assets/cyberpunkar/cyberpunkrifle.jpg
   alt: Side view of Cyberpunk AR
 ---
-
-
-
-
-
-
 This was a 3D modeling project inspired by a side view concept made by **[Dipo Muh](https://www.artstation.com/nomansnodead)** .
 I've always been inspired by Sci-fi worlds, and I decided that I was going to try to recreate one of the many awesome concepts designs made by Dipo. So I picked the second of the three displayed in the concept.
 
@@ -37,11 +31,8 @@ During the making of this project I was out of my house for some time but luckil
 
   When I was getting close to the final stages of the process, I decided to jump into the audio design and other elements, like adding a emissive element in the texture so it can signal to the player that it was running out of ammo, by changing the display color to red.
 
-  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate iaculis magna, ut cursus orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam pretium sodales enim a laoreet. Suspendisse fermentum finibus orci, feugiat vestibulum elit porttitor eget. Aenean ultricies mauris eu nisl tempor, et consectetur eros pretium. Cras vel scelerisque lacus. In at nisi non felis dapibus porta. Vestibulum arcu mi, venenatis non quam ac, accumsan mollis lorem.
-
   <video autoplay="" class="vjs-tech" controlslist="nodownload" id="video_html5_api" width="765" loop="" muted="muted" playsinline="playsinline" poster="https://cdn.artstation.com/p/thumbnails/001/168/392/thumb.jpg" tabindex="-1" preload="auto"><source media="(min-width: 0px)" src="https://cdn.artstation.com/p/video_sources/001/197/226/martin-abarca-dipogun-vid00.mp4" type="video/mp4"></video>
 
-## Titulardo
 
 This project helped me discover the importance of paying attention to how your roughness and metallic maps behave with light reflecting on the surface. Sometimes a good paint job can mask it making the model look good but having water or shiny aspects on the model that dont actually react to the light, makes the illusion fall really quick.
 
@@ -55,12 +46,16 @@ This project helped me discover the importance of paying attention to how your r
   muted=true
 %}
 
+<!-- Section pendient to edit
+
 Maecenas et tortor consectetur, malesuada leo sed, placerat diam. Integer pellentesque tortor et tellus interdum, ut blandit metus sodales. Aenean dolor est, blandit et facilisis et, viverra in ipsum. Sed bibendum auctor dolor, vitae efficitur sem laoreet eget. Duis nec congue turpis, vel aliquet sapien. Donec eget venenatis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sodales ipsum nec dolor scelerisque tincidunt.
 ![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }
 
 
 Gathering reference material and trying to understand from what real life weapon this concept was based on,I found that the Lee Enfield No.4 was the closest design.
 Aliquam tincidunt dapibus velit, in consectetur ipsum facilisis in. Maecenas interdum odio arcu, quis eleifend ante tincidunt nec. Fusce non tristique orci. Vivamus hendrerit viverra risus et porttitor. Nam vel dolor vestibulum libero tincidunt scelerisque id non mi. In rhoncus vitae mi non porta. Cras viverra tellus ut mollis lacinia. Donec imperdiet lacinia blandit.
+
+-->
 
 
 ![img-description](https://cdnb.artstation.com/p/assets/images/images/059/692/109/large/martin-abarca-martin-abarca-dipogun-00.jpg?1676946580)
