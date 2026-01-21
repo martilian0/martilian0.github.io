@@ -48,26 +48,26 @@
     }
     .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
 
-    /* LÍNEA DIVISORIA EXACTA A DESIGN_OK */
+    /* LÍNEA DIVISORIA REFINADA */
     .custom-sidebar-divider {
       border-top: 1.5px solid rgba(0, 0, 0, 0.08) !important;
       width: 100%;
-      margin-top: 20px !important; /* Espacio antes de la línea */
-      padding-top: 25px !important; /* Espacio entre línea e idiomas (Sangría vertical) */
+      margin-top: 15px !important; /* Espacio moderado arriba de la línea */
+      padding-top: 22px !important; /* Sangría vertical entre línea e idiomas */
     }
 
     [data-mode='dark'] .custom-sidebar-divider {
       border-top: 1.5px solid rgba(255, 255, 255, 0.1) !important;
     }
 
-    /* ESPACIADO ENTRE IDIOMAS IDÉNTICO A LA FOTO */
-    .lang-gap {
-      gap: 18px !important;
+    /* ESPACIADO MÁS JUNTO ENTRE IDIOMAS */
+    .lang-gap-tight {
+      gap: 12px !important; /* Ajustado para que estén un poco más juntos */
     }
   </style>
 
   <div class="lang-selector mt-auto mb-3 custom-sidebar-divider">
-    <div class="d-flex justify-content-center flex-wrap lang-gap">
+    <div class="d-flex justify-content-center flex-wrap lang-gap-tight">
       {% for tongue in site.languages %}
         {% if tongue == site.default_lang %}
           {% assign target_href = page.url | prepend: " " %}
