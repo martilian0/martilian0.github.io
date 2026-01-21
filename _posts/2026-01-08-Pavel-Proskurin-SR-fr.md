@@ -42,11 +42,12 @@ La raison pour laquelle je ne les ai pas incluses à la fin est que l'animation 
 {%
   include embed/video.html
   src='https://video.gumlet.io/696069beac93fe085655e2c9/696e9801bcef432370b84971/main.mp4'
-  title='Séquences d'animation du fusil de précision'
+  title='Sniper Animation sequences'
   autoplay=true
   loop=true
   muted=true
 %}
+
 
 
 
