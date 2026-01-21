@@ -52,23 +52,19 @@
   <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
     <div class="d-flex flex-wrap gap-2">
       {% for tongue in site.languages %}
-        {% comment %}
-          LIMPIEZA RADICAL:
-          Quitamos cualquier rastro de prefijo de idioma de la URL actual
-        {% endcomment %}
-        {% assign clean_path = page.url | replace_first: '/es/', '/' | replace_first: '/fr/', '/' | replace_first: '/br/', '/' | replace: '//', '/' %}
-
         {% if tongue == site.default_lang %}
-          {% comment %} Para inglés: usamos la ruta limpia directo al raíz {% endcomment %}
-          {% assign final_url = clean_path | prepend: site.baseurl | replace: '//', '/' %}
+          {% comment %}
+             TRUCO POLYGLOT: El espacio antes de {{ page.url }} es vital.
+             Indica a Polyglot que NO debe añadir el prefijo /es/, /fr/ o /br/.
+          {% endcomment %}
+          {% assign target_href = page.url | prepend: " " %}
         {% else %}
-          {% comment %} Para otros: inyectamos el idioma {% endcomment %}
-          {% assign final_url = clean_path | prepend: tongue | prepend: '/' | prepend: site.baseurl | replace: '//', '/' %}
+          {% assign target_href = page.url | prepend: tongue | prepend: '/' %}
         {% endif %}
 
         <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
            style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
-           href="{{ final_url }}">
+           href="{{ target_href }}">
           <span class="lang-flag">
             {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
           </span>
@@ -87,25 +83,25 @@
     {% endunless %}
 
     {% for entry in site.data.contact %}
-      {% assign contact_target = "" %}
+      {% assign contact_url = "" %}
       {% case entry.type %}
         {% when 'github', 'twitter' %}
           {% if site[entry.type].username %}
-            {% capture contact_target %}https://{{ entry.type }}.com/{{ site[entry.type].username }}{% endcapture %}
+            {% capture contact_url %}https://{{ entry.type }}.com/{{ site[entry.type].username }}{% endcapture %}
           {% endif %}
         {% when 'email' %}
           {% if site.social.email %}
             {% assign email = site.social.email | split: '@' %}
-            {% capture contact_target %}javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'){% endcapture %}
+            {% capture contact_url %}javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'){% endcapture %}
           {% endif %}
         {% when 'rss' %}
-          {% assign contact_target = '/feed.xml' | relative_url %}
+          {% assign contact_url = '/feed.xml' | relative_url %}
         {% else %}
-          {% assign contact_target = entry.url %}
+          {% assign contact_url = entry.url %}
       {% endcase %}
 
-      {% if contact_target != "" %}
-        <a href="{{ contact_target }}" aria-label="{{ entry.type }}" {% unless entry.noblank %}target="_blank" rel="noopener noreferrer"{% endunless %}>
+      {% if contact_url != "" %}
+        <a href="{{ contact_url }}" aria-label="{{ entry.type }}" {% unless entry.noblank %}target="_blank" rel="noopener noreferrer"{% endunless %}>
           <i class="{{ entry.icon }}"></i>
         </a>
       {% endif %}
