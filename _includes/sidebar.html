@@ -47,28 +47,15 @@
       font-display: swap;
     }
     .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
+    .lang-link { cursor: pointer; font-size: 0.85rem; padding: 0.2rem 0.4rem; border: none; background: none; transition: color 0.2s; }
   </style>
 
   <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
     <div class="d-flex flex-wrap gap-2">
       {% for tongue in site.languages %}
-        {% comment %}
-          LÓGICA MEJORADA:
-          Usamos el permalink original de la página para reconstruir la ruta
-        {% endcomment %}
-        {% assign base_path = page.url | replace_first: '/es/', '/' | replace_first: '/fr/', '/' | replace_first: '/br/', '/' %}
-
-        {% if tongue == site.default_lang %}
-          {% comment %} Para inglés, simplemente usamos la ruta base limpia {% endcomment %}
-          {% assign target_href = base_path | prepend: site.baseurl | replace: '//', '/' %}
-        {% else %}
-          {% comment %} Para otros idiomas, inyectamos el código del idioma {% endcomment %}
-          {% assign target_href = base_path | prepend: tongue | prepend: '/' | prepend: site.baseurl | replace: '//', '/' %}
-        {% endif %}
-
-        <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
-           style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
-           href="{{ target_href }}">
+        <a class="nav-link lang-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
+           style="color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
+           onclick="changeLanguage('{{ tongue }}')">
           <span class="lang-flag">
             {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
           </span>
@@ -77,6 +64,40 @@
       {% endfor %}
     </div>
   </div>
+
+  <script>
+    function changeLanguage(targetLang) {
+      let currentPath = window.location.pathname;
+      let baseurl = "{{ site.baseurl }}";
+
+      // 1. Limpiar el path actual de prefijos de idioma existentes
+      let languages = {{ site.languages | jsonify }};
+      let defaultLang = "{{ site.default_lang }}";
+
+      // Limpiar el path: quitar /es/, /fr/, /br/ si existen al inicio
+      languages.forEach(lang => {
+        if (lang !== defaultLang) {
+          let prefix = "/" + lang + "/";
+          if (currentPath.includes(prefix)) {
+            currentPath = currentPath.replace(prefix, "/");
+          }
+        }
+      });
+
+      // 2. Construir la nueva URL
+      let newPath;
+      if (targetLang === defaultLang) {
+        // Para inglés, ir a la ruta limpia
+        newPath = currentPath;
+      } else {
+        // Para otros, añadir el prefijo
+        newPath = "/" + targetLang + currentPath;
+      }
+
+      // Limpiar dobles barras y redirigir
+      window.location.href = newPath.replace(/\/+/g, '/');
+    }
+  </script>
 
   <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
     {% unless site.theme_mode %}
