@@ -6,13 +6,13 @@ title: Acerca de
 permalink: /about/
 lang: es
 ---
-![Desktop View](https://f4.bcbits.com/img/0031884415_20.jpg){: .right }{: .shadow }{: w="320" }Hola! soy Martin. Soy artista 3D viviendo en Chile. Me gradué como Animador Digital pero mi principal enfoque ha sido el modelado 3D HardSurface para motores de renderizado en tiempo real.
-Siempre estoy explorando diferentes medios y me he movido por diferentes areas, como lo son la animación vectorial, edicion de video, creación de assets para realidad virtual y aumentada,diseño de audio, entre otras cosas.
+![Desktop View](https://f4.bcbits.com/img/0031884415_20.jpg){: .right }{: .shadow }{: w="320" }¡Hola! Soy Martín. Soy un artista 3D que vive en Chile. Me gradué como Animador Digital, pero mi enfoque principal ha sido el modelado 3D de superficies duras (hard surface) para motores de renderizado en tiempo real.
 
-Me apasionan mucho los medios creativos, ya sean digitales o tradicionales, y siempre he tenido un interés en todo lo relacionado al audio y la música.
+He trabajado en diferentes proyectos relacionados con medios audiovisuales y siempre estoy explorando distintas formas de habitar espacios donde la tecnología y las ideas creativas se mezclan, ya sea de forma independiente o como parte de un equipo con integrantes de diversos ámbitos. Algunas de las áreas en las que me he interesado incluyen animaciones vectoriales, edición de video, creación de assets para realidad virtual y aumentada, diseño de audio y más.
 
-En mis tiempos libres trato de aprender cosas nuevas y experimentar creando música o algo relacionado al audio.
-Mi ultima inspiracion creativa ha sido aprender algo de modding para Unreal Engine 5, y ha sido una experiencia gratificante y entretenida.
+Me apasionan mucho los medios creativos, tanto digitales como tradicionales, y siempre he tenido interés en todo lo relacionado con el audio y la música. He ido coleccionando diferentes fuentes de inspiración a lo largo de los años que, en algún punto, se encuentran entre sí; lo que comienza como una simple idea, termina convirtiéndose en un proyecto increíble en el cual trabajar.
+
+En mi tiempo libre, intento aprender cosas nuevas y experimento creando música, explorando temas relacionados con el audio o cualquier otra cosa divertida que esté a la mano. Mi última inspiración creativa ha sido aprender algunas técnicas de modding para Unreal Engine 5, y ha sido una experiencia muy gratificante y divertida.
 
 {%
   include embed/video.html
