@@ -29,7 +29,12 @@ The scope also is a mix of different sights, the more noticeable is the mount an
 
 {% include embed/youtube.html id='znIjsaJJ7Rg' %}
 
+
+<!-- Edit segment
+
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vulputate iaculis magna, ut cursus orci. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Nam pretium sodales enim a laoreet. Suspendisse fermentum finibus orci, feugiat vestibulum elit porttitor eget. Aenean ultricies mauris eu nisl tempor, et consectetur eros pretium. Cras vel scelerisque lacus. In at nisi non felis dapibus porta. Vestibulum arcu mi, venenatis non quam ac, accumsan mollis lorem.
+
+-->
 
 I also worked in some animations for the model that i did not end up using in the end. but Still was a good experimentation to check how well the model could actually work in a real game environment.
 The reason i did not include them at the end was because the animation needed to be polished and also had to finish some other projects at the same time. So i stuck to the main asset modeling and texturing instead.
@@ -45,14 +50,12 @@ The reason i did not include them at the end was because the animation needed to
 
 
 
-## Titulardo
 
-Maecenas et tortor consectetur, malesuada leo sed, placerat diam. Integer pellentesque tortor et tellus interdum, ut blandit metus sodales. Aenean dolor est, blandit et facilisis et, viverra in ipsum. Sed bibendum auctor dolor, vitae efficitur sem laoreet eget. Duis nec congue turpis, vel aliquet sapien. Donec eget venenatis ante. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Vivamus sodales ipsum nec dolor scelerisque tincidunt.
+Another thing I like to mention is that I've learned a couple of things about these weapons that have some interesting cultural and historical value.
+For example when I was texturing the model, I've realized that the weapon have some marks in the metal pieces, and after googling here and there I found that these marks were actually a method of identification and categorization, from where and by who it was manifcatured, to modifications in the cannon for high velocity rounds, marks that indicated if it was property of the crown or it has military ownership, and even marks for use after war, in case this weapons traveled, they could recognize and track if it was a weapon acquired legally, or not.
 ![Desktop View](/assets/pavelproskurin/lee-enfield-no4.jpg){: .left }{: .shadow }{: width="256" height="140" }
 
 
-Gathering reference material and trying to understand from what real life weapon this concept was based on,I found that the Lee Enfield No.4 was the closest design.
-Aliquam tincidunt dapibus velit, in consectetur ipsum facilisis in. Maecenas interdum odio arcu, quis eleifend ante tincidunt nec. Fusce non tristique orci. Vivamus hendrerit viverra risus et porttitor. Nam vel dolor vestibulum libero tincidunt scelerisque id non mi. In rhoncus vitae mi non porta. Cras viverra tellus ut mollis lacinia. Donec imperdiet lacinia blandit.
 
 
 ![img-description](https://cdna.artstation.com/p/assets/images/images/059/693/060/large/martin-abarca-martin-abarca-pavelsniper-03.jpg?1676949473)
