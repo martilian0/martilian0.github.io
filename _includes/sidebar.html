@@ -55,83 +55,37 @@
   </style>
 
   <div class="lang-selector d-flex align-items-center justify-content-center w-100 mb-3 border-top pt-3">
-  <div class="d-flex flex-wrap gap-2">
-    {% for tongue in site.languages %}
+    <div class="d-flex flex-wrap gap-2">
+      {% for tongue in site.languages %}
 
-      {% comment %} 1. Limpiamos la URL actual de cualquier prefijo de idioma {% endcomment %}
-      {% assign clean_url = page.url %}
-      {% for lang in site.languages %}
-        {% if lang != "en" %}
+        {% comment %} 1. Limpiamos la URL actual de prefijos de idioma para evitar acumularlos {% endcomment %}
+        {% assign clean_url = page.url %}
+        {% for lang in site.languages %}
           {% capture lang_prefix %}/{{ lang }}/{% endcapture %}
           {% assign clean_url = clean_url | replace: lang_prefix, "/" %}
-        {% endif %}
-      {% endfor %}
+        {% endfor %}
 
-      {% comment %} 2. Construimos la URL de destino usando la URL absoluta del sitio {% endcomment %}
-      {% if tongue == "en" %}
-        {% comment %} Para EN, usamos la raíz pura del sitio {% endcomment %}
-        {% assign target_href = site.url | append: site.baseurl | append: clean_url | replace: '//', '/' %}
-      {% else %}
-        {% comment %} Para otros, insertamos el código de idioma {% endcomment %}
-        {% assign target_href = site.url | append: site.baseurl | append: '/' | append: tongue | append: clean_url | replace: '//', '/' %}
-      {% endif %}
-
-      <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
-         style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
-         href="{{ target_href }}">
-
-        <span class="lang-flag">
-          {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
-        </span>
-        {{ tongue | upcase }}
-      </a>
-    {% endfor %}
-  </div>
-</div>
-
-  <div class="sidebar-bottom d-flex flex-wrap align-items-center w-100">
-    {% unless site.theme_mode %}
-      <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
-        <i class="fas fa-adjust"></i>
-      </button>
-
-      {% if site.data.contact.size > 0 %}
-        <span class="icon-border"></span>
-      {% endif %}
-    {% endunless %}
-
-    {% for entry in site.data.contact %}
-      {%- assign url = null -%}
-
-      {% case entry.type %}
-        {% when 'github', 'twitter' %}
-          {%- unless site[entry.type].username -%}
-            {%- continue -%}
-          {%- endunless -%}
-          {%- capture url -%}
-            https://{{ entry.type }}.com/{{ site[entry.type].username }}
-          {%- endcapture -%}
-        {% when 'email' %}
-          {%- unless site.social.email -%}
-            {%- continue -%}
-          {%- endunless -%}
-          {%- assign email = site.social.email | split: '@' -%}
-          {%- capture url -%}
-            javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@')
-          {%- endcapture -%}
-        {% when 'rss' %}
-          {% assign url = '/feed.xml' | relative_url %}
+        {% comment %} 2. Construimos la ruta relativa pura {% endcomment %}
+        {% if tongue == site.default_lang %}
+          {% comment %} Para el idioma por defecto (EN), la ruta es /la-pagina/ {% endcomment %}
+          {% assign target_href = clean_url | prepend: site.baseurl | replace: '//', '/' %}
         {% else %}
-          {% assign url = entry.url %}
-      {% endcase %}
+          {% comment %} Para otros idiomas, la ruta es /es/la-pagina/ {% endcomment %}
+          {% assign target_href = clean_url | prepend: tongue | prepend: '/' | prepend: site.baseurl | replace: '//', '/' %}
+        {% endif %}
 
-      {% if url %}
-        <a href="{{ url }}" aria-label="{{ entry.type }}"
-          {% unless entry.noblank %}
-            target="_blank" rel="noopener noreferrer"
-          {% endunless %}>
-          <i class="{{ entry.icon }}"></i>
+        <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
+           style="font-size: 0.85rem; padding: 0.2rem 0.4rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
+           href="{{ target_href }}">
+
+          <span class="lang-flag">
+            {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
+          </span>
+          {{ tongue | upcase }}
         </a>
+      {% endfor %}
+    </div>
+  </div>
       {% endif %}
     {% endfor %}
   </div>

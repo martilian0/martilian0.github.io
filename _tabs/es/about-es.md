@@ -3,7 +3,7 @@
 icon: fas fa-info-circle
 order: 5
 title: Acerca de
-permalink: /about/
+permalink: /about
 lang: es
 ---
 ![Desktop View](https://f4.bcbits.com/img/0031884415_20.jpg){: .right }{: .shadow }{: w="320" }Hola! soy Martin. Soy artista 3D viviendo en Chile. Me gradué como Animador Digital pero mi principal enfoque ha sido el modelado 3D HardSurface para motores de renderizado en tiempo real.
