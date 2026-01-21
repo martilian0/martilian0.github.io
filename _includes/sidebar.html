@@ -53,10 +53,6 @@
     <div class="d-flex flex-wrap gap-2">
       {% for tongue in site.languages %}
         {% if tongue == site.default_lang %}
-          {% comment %}
-             TRUCO POLYGLOT: El espacio antes de {{ page.url }} es vital.
-             Indica a Polyglot que NO debe añadir el prefijo /es/, /fr/ o /br/.
-          {% endcomment %}
           {% assign target_href = page.url | prepend: " " %}
         {% else %}
           {% assign target_href = page.url | prepend: tongue | prepend: '/' %}
@@ -79,7 +75,9 @@
       <button type="button" class="btn btn-link nav-link" aria-label="Switch Mode" id="mode-toggle">
         <i class="fas fa-adjust"></i>
       </button>
-      {% if site.data.contact.size > 0 %}<span class="icon-border"></span>{% endif %}
+      {% if site.data.contact.size > 0 %}
+        <span class="icon-border"></span>
+      {% endif %}
     {% endunless %}
 
     {% for entry in site.data.contact %}
