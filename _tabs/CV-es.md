@@ -55,7 +55,7 @@ Encargado de la creación de assets digitales, incluyendo modelado, texturizado 
 ### __Inglés__  🇬🇧
 > *     Fluido
 
-# __Software proficiency__ 💻
+# __Dominio de software__ 💻
 
 <div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: flex-start; margin-top: 20px;">
   <img src="/assets/softwares/maya.svg" width="45" height="45" alt="Maya" title="Maya">
