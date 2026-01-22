@@ -59,9 +59,7 @@ for Virtual Reality.
 
 # __Software proficiency__ 💻
 
-<p align="left">
-  <img src="/assets/softwares/adobe-after-effects.svg" width="40" title="After Effects">
-  <img src="/assets/softwares/adobe-illustrator.svg" width="40" title="Illustrator">
-  <img src="/assets/softwares/adobe-photoshop.svg" width="40" title="Photoshop">
-  <img src="/assets/softwares/adobe-premiere.svg" width="40" title="Premiere">
-</p>
+<img src="/assets/softwares/adobe-after-effects.svg" width="40" height="40" alt="After Effects" style="margin-right: 10px;">
+<img src="/assets/softwares/adobe-illustrator.svg" width="40" height="40" alt="Illustrator" style="margin-right: 10px;">
+<img src="/assets/softwares/adobe-photoshop.svg" width="40" height="40" alt="Photoshop" style="margin-right: 10px;">
+<img src="/assets/softwares/adobe-premiere.svg" width="40" height="40" alt="Premiere">
