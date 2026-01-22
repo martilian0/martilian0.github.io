@@ -59,14 +59,16 @@ for Virtual Reality.
 
 # __Software proficiency__ 💻
 
-> <img src="/assets/softwares/maya.svg" width="40" height="40" alt="Maya">
-> <img src="/assets/softwares/blender.svg" width="40" height="40" alt="Blender">
-> <img src="/assets/softwares/marmoset-toolbag.svg" width="40" height="40" alt="Marmoset">
-> <img src="/assets/softwares/unreal-engine.svg" width="40" height="40" alt="UnrealEngine">
-> <img src="/assets/softwares/aseprite.svg" width="40" height="40" alt="Aseprite">
-> <img src="/assets/softwares/ableton-live.svg" width="40" height="40" alt="AbletonLive">
-> <img src="/assets/softwares/adobe-substance-3d-painter.svg" width="40" height="40" alt="SubstancePainter">
-> <img src="/assets/softwares/adobe-illustrator.svg" width="40" height="40" alt="Illustrator" style="margin-right: 10px;">
-> <img src="/assets/softwares/adobe-photoshop.svg" width="40" height="40" alt="Photoshop" style="margin-right: 10px;">
-> <img src="/assets/softwares/adobe-after-effects.svg" width="40" height="40" alt="After Effects" style="margin-right: 10px;">
-> <img src="/assets/softwares/adobe-premiere.svg" width="40" height="40" alt="Premiere">
+<div style="display: flex; flex-wrap: wrap; gap: 20px; align-items: center; justify-content: flex-start; margin-top: 20px;">
+  <img src="/assets/softwares/maya.svg" width="45" height="45" alt="Maya" title="Maya">
+  <img src="/assets/softwares/blender.svg" width="45" height="45" alt="Blender" title="Blender">
+  <img src="/assets/softwares/marmoset-toolbag.svg" width="45" height="45" alt="Marmoset" title="Marmoset Toolbag">
+  <img src="/assets/softwares/unreal-engine.svg" width="45" height="45" alt="UnrealEngine" title="Unreal Engine">
+  <img src="/assets/softwares/adobe-substance-3d-painter.svg" width="45" height="45" alt="SubstancePainter" title="Substance Painter">
+  <img src="/assets/softwares/adobe-photoshop.svg" width="45" height="45" alt="Photoshop" title="Photoshop">
+  <img src="/assets/softwares/adobe-illustrator.svg" width="45" height="45" alt="Illustrator" title="Illustrator">
+  <img src="/assets/softwares/adobe-after-effects.svg" width="45" height="45" alt="After Effects" title="After Effects">
+  <img src="/assets/softwares/adobe-premiere.svg" width="45" height="45" alt="Premiere" title="Premiere">
+  <img src="/assets/softwares/aseprite.svg" width="45" height="45" alt="Aseprite" title="Aseprite">
+  <img src="/assets/softwares/ableton-live.svg" width="45" height="45" alt="AbletonLive" title="Ableton Live">
+</div>
