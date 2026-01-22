@@ -20,6 +20,10 @@ lang: en
 interactive projection mapping event happened at [Congreso Futuro](https://congresofuturo.cl/)
 >
 
+### __Freelance__  - <font size= "3"><strong>Viña del Mar, Chile  <font size= "3" style="color:#D3D3D3;"> (FEB 2025 - SEP 2025)</font></strong></font> - <font size= "3">🔹 Animator</font>
+> *     Worked as a motion graphic artist for different short form content creation.
+>
+
 ### __Loopsin Inc.__  - <font size= "3"><strong>Montreal, Canada  <font size= "3" style="color:#D3D3D3;"> (AUG 2023 - OCT 2023)</font></strong></font> - <font size= "3">🔹 3D Artist</font>
 > *     Remote contractor in charge of helping the Art team deliver 3D
 assets within deadlines, \

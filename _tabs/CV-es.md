@@ -19,6 +19,10 @@ lang: es
 > *     Apoyo animando un set de gráficos vectoriales destinados a un evento de proyection mapping interactivo realizado en [Congreso Futuro](https://congresofuturo.cl/)
 >
 
+### __Freelance__  - <font size= "3"><strong>Viña del Mar, Chile  <font size= "3" style="color:#D3D3D3;"> (FEB 2025 - SEP 2025)</font></strong></font> - <font size= "3">🔹 Animator</font>
+> *     Trabajé como artista de motion graphcis para distintos proyectos de contenido en formato corto.
+>
+
 ### __Loopsin Inc.__  - <font size= "3"><strong>Montreal, Canada  <font size= "3" style="color:#D3D3D3;"> (AUG 2023 - OCT 2023)</font></strong></font> - <font size= "3">🔹 Artista 3D</font>
 > *     Contratista remoto a cargo de ayudar al equipo de Arte a entregar activos 3D dentro de los plazos establecidos. Incluyendo la creación de LOD's y chequeo de calidad.
 >
