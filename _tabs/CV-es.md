@@ -61,6 +61,7 @@ Encargado de la creación de assets digitales, incluyendo modelado, texturizado 
   <img src="/assets/softwares/maya.svg" width="45" height="45" alt="Maya" title="Maya">
   <img src="/assets/softwares/blender.svg" width="45" height="45" alt="Blender" title="Blender">
   <img src="/assets/softwares/marmoset-toolbag.svg" width="45" height="45" alt="Marmoset" title="Marmoset Toolbag">
+  <img src="/assets/softwares/zbrush.svg" width="45" height="45" alt="Zbrush">
   <img src="/assets/softwares/unreal-engine.svg" width="45" height="45" alt="UnrealEngine" title="Unreal Engine">
   <img src="/assets/softwares/adobe-substance-3d-painter.svg" width="45" height="45" alt="SubstancePainter" title="Substance Painter">
   <img src="/assets/softwares/adobe-photoshop.svg" width="45" height="45" alt="Photoshop" title="Photoshop">
