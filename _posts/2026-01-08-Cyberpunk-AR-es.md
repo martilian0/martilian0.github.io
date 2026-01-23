@@ -76,5 +76,5 @@ _Marmoset Toolbag 5 Render_
 
 <video autoplay="" class="vjs-tech" controlslist="nodownload" id="video_html5_api" width="765" loop="" playsinline="playsinline" poster="https://cdn.artstation.com/p/thumbnails/001/168/405/thumb.jpg" tabindex="-1" preload="auto" muted="muted"><source media="(min-width: 0px)" src="https://cdn.artstation.com/p/video_sources/001/197/239/martin-abarca-dipogun-vid04.mp4" type="video/mp4"></video>
 
-> If you wish to see the full article, you can visit the post by **[Artstation](https://www.artstation.com/artwork/8blvAn)**.
+> Si deseas ver el artículo completo, puedes visitar el post de**[Artstation](https://www.artstation.com/artwork/8blvAn)**.
 {: .prompt-info }
