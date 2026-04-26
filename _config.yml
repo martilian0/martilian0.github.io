@@ -16,6 +16,7 @@ baseurl: ""
 plugins:
   - jekyll-polyglot
   - jekyll-redirect-from
+  - jekyll-sitemap
 
 languages: ["en", "es", "fr", "br"]
 default_lang: "en"
