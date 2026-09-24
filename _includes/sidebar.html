@@ -40,14 +40,18 @@
   </nav>
 
   <style>
-    /* PREVIENE COLISIONES Y SOLAPANAMIENTOS EN EL HEADER */
-    .profile-wrapper {
-      margin-bottom: 2rem !important;
-      flex-shrink: 0 !important;
+    /* BLOQUEA COLISIONES: Limita el tagline a un máximo de 2 líneas con "..." */
+    .site-subtitle {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
     }
 
-    #sidebar nav {
-      margin-top: 5px !important;
+    .profile-wrapper {
+      margin-bottom: 1.5rem !important;
+      flex-shrink: 0 !important;
     }
 
     /* LÍNEA DIVISORIA REFINADA */
