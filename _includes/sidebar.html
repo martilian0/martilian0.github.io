@@ -1,5 +1,5 @@
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
-  <header class="profile-wrapper mb-4">
+  <header class="profile-wrapper">
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
       {% if site.avatar != empty and site.avatar %}
         {% capture avatar_url %}{% include media-url.html src=site.avatar %}{% endcapture %}
@@ -40,6 +40,16 @@
   </nav>
 
   <style>
+    /* PREVIENE COLISIONES Y SOLAPANAMIENTOS EN EL HEADER */
+    .profile-wrapper {
+      margin-bottom: 2rem !important;
+      flex-shrink: 0 !important;
+    }
+
+    #sidebar nav {
+      margin-top: 5px !important;
+    }
+
     /* LÍNEA DIVISORIA REFINADA */
     .custom-sidebar-divider {
       border-top: 1.5px solid rgba(0, 0, 0, 0.08) !important;
