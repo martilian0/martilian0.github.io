@@ -40,31 +40,31 @@
   </nav>
 
   <style>
-    @font-face {
-      font-family: 'NotoColorEmojiLimited';
-      unicode-range: U+1F1E6-1F1FF;
-      src: url(https://github.com/googlefonts/noto-emoji/blob/main/2D/fonts/NotoColorEmoji.ttf);
-      font-display: swap;
-    }
-    .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
+      @font-face {
+        font-family: 'NotoColorEmojiLimited';
+        unicode-range: U+1F1E6-1F1FF;
+        src: url('https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@main/fonts/NotoColorEmoji.ttf') format('truetype');
+        font-display: swap;
+      }
+      .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
 
-    /* LÍNEA DIVISORIA REFINADA */
-    .custom-sidebar-divider {
-      border-top: 1.5px solid rgba(0, 0, 0, 0.08) !important;
-      width: 100%;
-      margin-top: 15px !important; /* Espacio moderado arriba de la línea */
-      padding-top: 22px !important; /* Sangría vertical entre línea e idiomas */
-    }
+      /* LÍNEA DIVISORIA REFINADA */
+      .custom-sidebar-divider {
+        border-top: 1.5px solid rgba(0, 0, 0, 0.08) !important;
+        width: 100%;
+        margin-top: 15px !important;
+        padding-top: 22px !important;
+      }
 
-    [data-mode='dark'] .custom-sidebar-divider {
-      border-top: 1.5px solid rgba(255, 255, 255, 0.1) !important;
-    }
+      [data-mode='dark'] .custom-sidebar-divider {
+        border-top: 1.5px solid rgba(255, 255, 255, 0.1) !important;
+      }
 
-    /* ESPACIADO MÁS JUNTO ENTRE IDIOMAS */
-    .lang-gap-tight {
-      gap: 12px !important; /* Ajustado para que estén un poco más juntos */
-    }
-  </style>
+      /* ESPACIADO MÁS JUNTO ENTRE IDIOMAS */
+      .lang-gap-tight {
+        gap: 12px !important;
+      }
+    </style>
 
   <div class="lang-selector mt-auto mb-3 custom-sidebar-divider">
     <div class="d-flex justify-content-center flex-wrap lang-gap-tight">
