@@ -1,7 +1,4 @@
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
-  <!-- Load optimized Fontsource Noto Color Emoji via jsDelivr CDN -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-color-emoji@5.3.1/index.css">
-
   <header class="profile-wrapper">
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
       {% if site.avatar != empty and site.avatar %}
@@ -43,17 +40,20 @@
   </nav>
 
   <style>
-    .lang-flag {
-      font-family: 'Noto Color Emoji', sans-serif;
-      margin-right: 5px;
+    @font-face {
+      font-family: 'NotoColorEmojiLimited';
+      unicode-range: U+1F1E6-1F1FF;
+      src: url('https://cdn.jsdelivr.net/gh/googlefonts/noto-emoji@main/fonts/NotoColorEmoji.ttf');
+      font-display: swap;
     }
+    .lang-flag { font-family: 'NotoColorEmojiLimited', sans-serif; margin-right: 5px; }
 
     /* LÍNEA DIVISORIA REFINADA */
     .custom-sidebar-divider {
       border-top: 1.5px solid rgba(0, 0, 0, 0.08) !important;
       width: 100%;
-      margin-top: 15px !important;
-      padding-top: 22px !important;
+      margin-top: 15px !important; /* Espacio moderado arriba de la línea */
+      padding-top: 22px !important; /* Sangría vertical entre línea e idiomas */
     }
 
     [data-mode='dark'] .custom-sidebar-divider {
@@ -62,7 +62,7 @@
 
     /* ESPACIADO MÁS JUNTO ENTRE IDIOMAS */
     .lang-gap-tight {
-      gap: 12px !important;
+      gap: 12px !important; /* Ajustado para que estén un poco más juntos */
     }
   </style>
 
