@@ -1,4 +1,7 @@
 <aside aria-label="Sidebar" id="sidebar" class="d-flex flex-column align-items-end">
+  <!-- Load optimized Fontsource Noto Color Emoji via jsDelivr CDN -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fontsource/noto-color-emoji@5.3.1/index.css">
+
   <header class="profile-wrapper">
     <a href="{{ '/' | relative_url }}" id="avatar" class="rounded-circle">
       {% if site.avatar != empty and site.avatar %}
@@ -40,6 +43,11 @@
   </nav>
 
   <style>
+    .lang-flag {
+      font-family: 'Noto Color Emoji', sans-serif;
+      margin-right: 5px;
+    }
+
     /* LÍNEA DIVISORIA REFINADA */
     .custom-sidebar-divider {
       border-top: 1.5px solid rgba(0, 0, 0, 0.08) !important;
@@ -56,15 +64,6 @@
     .lang-gap-tight {
       gap: 12px !important;
     }
-
-    .lang-flag-img {
-      width: 20px;
-      height: 15px;
-      object-fit: cover;
-      border-radius: 2px;
-      margin-right: 5px;
-      vertical-align: middle;
-    }
   </style>
 
   <div class="lang-selector mt-auto mb-3 custom-sidebar-divider">
@@ -79,15 +78,9 @@
         <a class="nav-link {% if tongue == site.active_lang %}active font-weight-bold{% endif %}"
             style="font-size: 0.85rem; padding: 0.2rem 0.2rem; color: {% if tongue == site.active_lang %}var(--sidebar-active-color){% else %}var(--sidebar-muted-color){% endif %};"
             href="{{ target_href }}">
-          {% if tongue == "en" %}
-            <img class="lang-flag-img" src="https://flagcdn.com/w20/us.png" alt="US Flag">
-          {% elsif tongue == "es" %}
-            <img class="lang-flag-img" src="https://flagcdn.com/w20/es.png" alt="ES Flag">
-          {% elsif tongue == "fr" %}
-            <img class="lang-flag-img" src="https://flagcdn.com/w20/fr.png" alt="FR Flag">
-          {% elsif tongue == "br" %}
-            <img class="lang-flag-img" src="https://flagcdn.com/w20/br.png" alt="BR Flag">
-          {% endif %}
+          <span class="lang-flag">
+            {% if tongue == "en" %}🇺🇸{% elsif tongue == "es" %}🇪🇸{% elsif tongue == "fr" %}🇫🇷{% elsif tongue == "br" %}🇧🇷{% endif %}
+          </span>
           {{ tongue | upcase }}
         </a>
       {% endfor %}
@@ -112,7 +105,7 @@
         {% when 'email' %}
           {% if site.social.email %}
             {% assign email = site.social.email | split: '@' %}
-            {% capture contact_url %}javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@ជី')[0] ... wait let's keep original email logic ...
+            {% capture contact_url %}javascript:location.href = 'mailto:' + ['{{ email[0] }}','{{ email[1] }}'].join('@'){% endcapture %}
           {% endif %}
         {% when 'rss' %}
           {% assign contact_url = '/feed.xml' | relative_url %}
