@@ -9,13 +9,19 @@
 
     <a class="site-title d-block" href="{{ '/' | relative_url }}">{{ site.title }}</a>
 
-    <p class="site-subtitle fst-italic mb-0">
-      {% if site.data.locales[site.active_lang].tagline %}
-        {{ site.data.locales[site.active_lang].tagline }}
-      {% else %}
-        {{ site.tagline }}
-      {% endif %}
-    </p>
+    <!-- TAGLINE CON BOTÓN DE FLECHA DESPLEGABLE -->
+    <div class="site-subtitle-container w-100">
+      <p class="site-subtitle fst-italic mb-0" id="site-subtitle">
+        {% if site.data.locales[site.active_lang].tagline %}
+          {{ site.data.locales[site.active_lang].tagline }}
+        {% else %}
+          {{ site.tagline }}
+        {% endif %}
+      </p>
+      <button type="button" class="btn-toggle-tagline" aria-label="Toggle Subtitle" onclick="toggleSubtitle()">
+        <i class="fas fa-chevron-down" id="subtitle-icon"></i>
+      </button>
+    </div>
   </header>
 
   <nav class="flex-column flex-grow-1 w-100 ps-0">
@@ -40,18 +46,58 @@
   </nav>
 
   <style>
-    /* Permite múltiples líneas y habilita scroll nativo en el sidebar si es necesario */
+    /* ESTILOS PARA EL DESPLEGABLE DEL TAGLINE */
+    .site-subtitle-container {
+      position: relative;
+    }
+
+    .site-subtitle {
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      transition: all 0.3s ease;
+    }
+
+    .site-subtitle.expanded {
+      -webkit-line-clamp: unset;
+      overflow: visible;
+    }
+
+    .btn-toggle-tagline {
+      background: none;
+      border: none;
+      color: var(--sidebar-muted-color);
+      font-size: 0.7rem;
+      padding: 2px 0;
+      cursor: pointer;
+      margin-top: 3px;
+      display: inline-flex;
+      align-items: center;
+      opacity: 0.7;
+      transition: opacity 0.2s;
+    }
+
+    .btn-toggle-tagline:hover {
+      opacity: 1;
+    }
+
+    .btn-toggle-tagline i {
+      transition: transform 0.3s ease;
+    }
+
+    .btn-toggle-tagline.expanded i {
+      transform: rotate(180deg);
+    }
+
     #sidebar {
       overflow-y: auto !important;
       overflow-x: hidden !important;
     }
 
-    .site-subtitle {
-      word-break: break-word;
-    }
-
     .profile-wrapper {
-      margin-bottom: 1.2rem !important;
+      margin-bottom: 1rem !important;
       flex-shrink: 0 !important;
     }
 
@@ -72,6 +118,15 @@
       gap: 12px !important;
     }
   </style>
+
+  <script>
+    function toggleSubtitle() {
+      const subtitle = document.getElementById('site-subtitle');
+      const btn = document.querySelector('.btn-toggle-tagline');
+      subtitle.classList.toggle('expanded');
+      btn.classList.toggle('expanded');
+    }
+  </script>
 
   <div class="lang-selector mt-auto mb-3 custom-sidebar-divider">
     <div class="d-flex justify-content-center flex-wrap lang-gap-tight">
